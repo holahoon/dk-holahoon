@@ -1,0 +1,28 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  @include flex(row, space-between, center);
+  margin-bottom: calcRem(20px);
+  padding: 0 calcRem(30px);
+
+  .switch {
+    @include flex(row);
+    color: $text-black;
+
+    &__slash {
+      margin: 0 calcRem(10px);
+    }
+    &__en {
+      &--active {
+        color: red;
+      }
+    }
+    &__kr {
+      &--active {
+        color: red;
+      }
+    }
+  }
+}
