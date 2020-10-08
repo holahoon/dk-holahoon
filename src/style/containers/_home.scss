@@ -1,4 +1,66 @@
 .home {
   @include flex();
   height: 100%;
+
+  &__english-container {
+    color: $text-dark-gray;
+    .english {
+      &-greeting {
+        margin-bottom: calcRem(20px);
+        @include fontSize(35px);
+        font-family: $pp-regular;
+        @include lineHeight(35px, 35px);
+      }
+      &-name {
+        @include fontSize(70px);
+        font-family: $pp-regular;
+        @include lineHeight(70px, 75px);
+        span {
+          @include fontSize(78px);
+          font-family: $pp-semibold;
+          color: $text-black;
+        }
+      }
+      &-title {
+        @include fontSize(50px);
+        font-family: $pp-regular;
+        @include lineHeight(50px, 55px);
+        span {
+          @include fontSize(58px);
+          font-family: $pp-semibold;
+          color: $text-black;
+        }
+      }
+    }
+  }
+  &__korean-container {
+    color: $text-dark-gray;
+    .korean {
+      &-greeting {
+        margin-bottom: calcRem(20px);
+        @include fontSize(35px);
+        font-family: $bc-light;
+      }
+      &-name {
+        @include fontSize(50px);
+        font-family: $bc-light;
+        @include lineHeight(50px, 60px);
+        span {
+          @include fontSize(55px);
+          font-family: $bc-bold;
+          color: $text-black;
+        }
+      }
+      &-title {
+        @include fontSize(70px);
+        font-family: $bc-light;
+        @include lineHeight(70px, 80px);
+        span {
+          @include fontSize(75px);
+          font-family: $bc-bold;
+          color: $text-black;
+        }
+      }
+    }
+  }
 }

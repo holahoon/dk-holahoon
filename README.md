@@ -7,6 +7,7 @@
 [react-router-dom]
 [framer-motion]
 [Sass]
+[react-icons]
 
 ### Modifications
 

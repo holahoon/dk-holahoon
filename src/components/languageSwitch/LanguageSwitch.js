@@ -13,19 +13,19 @@ function LanguageSwitch() {
 
   return (
     <div className='switch'>
-      <div
+      <span
         className={`switch__en${language === "en" ? "--active" : ""}`}
         onClick={setLanguageEnglishHandler}
       >
-        En
-      </div>
+        Eng
+      </span>
       <span className='switch__slash'>/</span>
-      <div
+      <span
         className={`switch__kr${language === "kr" ? "--active" : ""}`}
         onClick={setLanguageKoreanHandler}
       >
-        Kr
-      </div>
+        Kor
+      </span>
     </div>
   );
 }
