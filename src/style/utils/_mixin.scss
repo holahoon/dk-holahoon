@@ -1,0 +1,42 @@
+/* -- function to calculate px to rem -- */
+@function calcRem($size) {
+  @return ($size / 16px) * 1rem;
+}
+@function calculateLineHeight($fontSize, $lineHeight) {
+  @return ($lineHeight / $fontSize);
+}
+
+/* -- Global flex box -- */
+@mixin flex($direction: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* -- Font size calculation -- */
+@mixin fontSize($size) {
+  font-size: calcRem($size);
+}
+
+/* -- Font size calculation -- */
+@mixin lineHeight($fontSize, $lineHeight) {
+  line-height: calculateLineHeight($fontSize, $lineHeight);
+}
+
+/* -- Max width -- */
+@mixin max-width {
+  max-width: 1440px;
+}
+
+// @mixin font-cormorant($weight: 400, $style: normal) {
+//   font-family: $cormorant-garamond;
+//   font-weight: $weight;
+//   font-style: $style;
+// }
+
+// @mixin font-heebo($weight: 500, $style: normal) {
+//   font-family: $heebo;
+//   font-weight: $weight;
+//   font-style: $style;
+// }

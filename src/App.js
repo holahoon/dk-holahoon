@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import Navigation from "containers/Navigation";
+import { LanguageContext } from "hooks/LanguageContext";
+import Layout from "layout/Layout";
+import AppRouter from "containers/Router";
+import Footer from "containers/Footer";
+
+import "./style/main.scss";
+
+// const works = ["work1", "work2", "work3"];
 
 function App() {
+  const [language, setLanguage] = useState("en");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <LanguageContext.Provider
+        value={{
+          languageHandler: [language, setLanguage],
+        }}
+      >
+        <Layout>
+          <Router>
+            <Navigation />
+            <AppRouter />
+          </Router>
+          <Footer />
+        </Layout>
+      </LanguageContext.Provider>
+    </>
   );
 }
 

@@ -1,0 +1,71 @@
+/* -- Font for English -- */
+@font-face {
+  font-family: "Poppins-regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Poppins Regular"), local("Poppins-Regular"),
+    url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-regular.svg#Poppins")
+      format("svg"); /* Legacy iOS */
+}
+@font-face {
+  font-family: "Poppins-semibold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-600.eot"); /* IE9 Compat Modes */
+  src: local("Poppins SemiBold"), local("Poppins-SemiBold"),
+    url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-600.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-600.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../assets/fonts/poppins-v13_font/poppins-v13-latin-600.svg#Poppins")
+      format("svg"); /* Legacy iOS */
+}
+
+$pp-regular: "Poppins-regular";
+$pp-semibold: "Poppins-semibold";
+/* -- End of English -- */
+
+/* -- Font for Korean -- */
+@font-face {
+  font-family: "BC-Bold";
+  src: url("../../assets/fonts/bccard_font/BC-card-ios/BCcardB.otf")
+      format("otf"),
+    url("../../assets/fonts/bccard_font/BC-card-window/BCcardB.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BC-Light";
+  src: url("../../assets/fonts/bccard_font/BC-card-ios/BCcardL.otf")
+      format("otf"),
+    url("../../assets/fonts/bccard_font/BC-card-window/BCcardL.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$bc-bold: "BC-Bold";
+$bc-light: "BC-Light";
+/* -- End of Korean -- */
