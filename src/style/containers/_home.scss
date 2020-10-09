@@ -2,65 +2,224 @@
   @include flex();
   height: 100%;
 
+  &__content-container {
+    padding: 0 7px;
+    @include bp(mobile-lg-up) {
+      padding: 0 10px;
+    }
+    @include bp(tablet-sm-up) {
+      // padding: 0 10px;
+    }
+  }
+
   &__english-container {
     color: $text-dark-gray;
     .english {
       &-greeting {
-        margin-bottom: calcRem(20px);
-        @include fontSize(35px);
+        margin-bottom: calcRem(30px);
+        @include fontSize(25px);
         font-family: $pp-regular;
-        @include lineHeight(35px, 35px);
+        @include lineHeight(25px, 25px);
+        @include bp(tablet-sm-up) {
+          margin-bottom: calcRem(20px);
+          @include fontSize(35px);
+          @include lineHeight(35px, 35px);
+        }
       }
       &-name {
-        @include fontSize(70px);
+        @include fontSize(36px);
         font-family: $pp-regular;
-        @include lineHeight(70px, 75px);
-        span {
-          @include fontSize(78px);
+        @include lineHeight(36px, 40px);
+        @include bp(tablet-sm-up) {
+          @include fontSize(70px);
+          @include lineHeight(70px, 75px);
+        }
+        &__david {
+          @include fontSize(42px);
           font-family: $pp-semibold;
           color: $text-black;
+          display: inline-block;
+          position: relative;
+          z-index: 0; // This is needed because of the redline being a z-index of -1
+          @include bp(tablet-sm-up) {
+            @include fontSize(70px);
+          }
+          a {
+            color: $text-black;
+            transition: color 0.1s ease-in 0.15s;
+            &:hover {
+              color: $cornsilk;
+              & ~ .red-line {
+                height: 95%;
+              }
+            }
+          }
+          .red-line {
+            width: 100%;
+            height: calcRem(13px);
+            background-color: $coral-red;
+            border-radius: calcRem(2px);
+            position: absolute;
+            left: 0;
+            bottom: calcRem(4px);
+            z-index: -1;
+            transition: all 0.2s ease-in;
+            @include bp(tablet-sm-up) {
+              height: calcRem(20px);
+              bottom: calcRem(6px);
+            }
+          }
         }
       }
       &-title {
-        @include fontSize(50px);
+        @include fontSize(35px);
         font-family: $pp-regular;
-        @include lineHeight(50px, 55px);
-        span {
-          @include fontSize(58px);
+        @include lineHeight(35px, 38px);
+        @include bp(tablet-sm-up) {
+          @include fontSize(50px);
+          @include lineHeight(50px, 55px);
+        }
+        &__fe {
+          @include fontSize(30px);
           font-family: $pp-semibold;
           color: $text-black;
+          position: relative;
+          @include bp(tablet-sm-up) {
+            @include fontSize(62px);
+          }
+          .red-circle {
+            width: calcRem(12px);
+            height: calcRem(12px);
+            background-color: $coral-red;
+            border-radius: 50%;
+            display: inline-block;
+            @include bp(tablet-sm-up) {
+              width: calcRem(18px);
+              height: calcRem(18px);
+            }
+            @include bp(tablet-sm-up) {
+              position: absolute;
+              bottom: calcRem(20px);
+              animation: enBounce 0.8s ease-in-out infinite;
+            }
+          }
         }
       }
     }
   }
+
   &__korean-container {
     color: $text-dark-gray;
     .korean {
       &-greeting {
         margin-bottom: calcRem(20px);
-        @include fontSize(35px);
+        @include fontSize(25px);
         font-family: $bc-light;
+        @include bp(tablet-sm-up) {
+          @include fontSize(35px);
+        }
       }
       &-name {
         @include fontSize(50px);
         font-family: $bc-light;
         @include lineHeight(50px, 60px);
-        span {
+        &__david {
           @include fontSize(55px);
           font-family: $bc-bold;
           color: $text-black;
+          display: inline-block;
+          position: relative;
+          z-index: 0; // This is needed because of the redline being a z-index of -1
+          a {
+            color: $text-black;
+            transition: color 0.1s ease-in 0.15s;
+            &:hover {
+              color: $cornsilk;
+              & ~ .red-line {
+                height: 95%;
+              }
+            }
+          }
+          .red-line {
+            width: 100%;
+            height: calcRem(13px);
+            background-color: $coral-red;
+            border-radius: calcRem(2px);
+            position: absolute;
+            left: 0;
+            bottom: calcRem(5px);
+            z-index: -1;
+            transition: all 0.3s ease-in;
+            @include bp(tablet-sm-up) {
+              height: calcRem(15px);
+              bottom: calcRem(3px);
+            }
+          }
         }
       }
       &-title {
         @include fontSize(70px);
         font-family: $bc-light;
         @include lineHeight(70px, 80px);
-        span {
+        &__fe {
           @include fontSize(75px);
           font-family: $bc-bold;
           color: $text-black;
+          position: relative;
+          .red-circle {
+            width: calcRem(20px);
+            height: calcRem(20px);
+            background-color: $coral-red;
+            border-radius: 50%;
+            position: absolute;
+            bottom: calcRem(10px);
+            animation: krBounce 0.8s ease-in-out infinite;
+          }
         }
       }
     }
+  }
+
+  &__message-container {
+    margin-top: calcRem(20px);
+
+    .english-message {
+      text-align: right;
+      font-family: $heebo-regular;
+      color: $text-dark-gray;
+    }
+    .korean-message {
+      text-align: right;
+      font-family: $gm-medium;
+      color: $text-dark-gray;
+    }
+    .hustle {
+      text-align: right;
+      font-family: $heebo-regular;
+      color: $text-dark-gray;
+    }
+  }
+}
+
+@keyframes enBounce {
+  10% {
+    width: 18px;
+    height: 18px;
+  }
+  50% {
+    width: 22px;
+    height: 15px;
+    transform: translateY((100%));
+  }
+}
+@keyframes krBounce {
+  10% {
+    width: 20px;
+    height: 20px;
+  }
+  50% {
+    width: 24px;
+    height: 16px;
+    transform: translateY((100%));
   }
 }

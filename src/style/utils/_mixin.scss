@@ -1,3 +1,40 @@
+/* -- Media queries -- */
+$mobile-sm: 360px;
+$mobile-lg: 414px;
+$tablet-sm: 768px;
+$tablet-lg: 1024px;
+$desktop-sm: 1100px;
+$max-width: 1440px;
+
+@mixin bp($point, $viewport: 0) {
+  /* -- Min-width -- */
+  @if $point == mobile-sm-up {
+    @media (min-width: $mobile-sm + 1) {
+      @content;
+    }
+  } @else if $point == mobile-lg-up {
+    @media (min-width: $mobile-lg) {
+      @content;
+    }
+  } @else if $point == tablet-sm-up {
+    @media (min-width: $tablet-sm) {
+      @content;
+    }
+  } @else if $point == tablet-lg-up {
+    @media (min-width: $tablet-lg) {
+      @content;
+    }
+  } @else if $point == desktop-sm-up {
+    @media (min-width: $desktop-sm) {
+      @content;
+    }
+  } @else if $point == max-up-up {
+    @media (min-width: $max-width) {
+      @content;
+    }
+  }
+}
+
 /* -- function to calculate px to rem -- */
 @function calcRem($size) {
   @return ($size / 16px) * 1rem;
@@ -26,17 +63,5 @@
 
 /* -- Max width -- */
 @mixin max-width {
-  max-width: 1440px;
+  max-width: $max-width;
 }
-
-// @mixin font-cormorant($weight: 400, $style: normal) {
-//   font-family: $cormorant-garamond;
-//   font-weight: $weight;
-//   font-style: $style;
-// }
-
-// @mixin font-heebo($weight: 500, $style: normal) {
-//   font-family: $heebo;
-//   font-weight: $weight;
-//   font-style: $style;
-// }
