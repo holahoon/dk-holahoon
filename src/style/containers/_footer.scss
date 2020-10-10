@@ -8,7 +8,7 @@
   @include flex(column, space-between, center);
   margin-bottom: calcRem(5px);
   padding: 0 calcRem(30px);
-  z-index: 1;
+  z-index: 0;
   @include bp(tablet-sm-up) {
     @include flex(row, space-between, center);
     margin-bottom: calcRem(20px);

@@ -1,5 +1,6 @@
 .header {
   @include max-width;
+  @include flex(row, space-between, center);
   position: fixed;
   top: 0;
   left: auto;
@@ -9,31 +10,105 @@
   padding: 0 calcRem(30px);
   z-index: 1;
 
-  .nav {
-    @include flex(row, space-between, flex-end);
+  // - dk logo
+  &__logo {
+    a {
+      color: $text-dark-gray;
+      font-family: $pp-semibold;
+      font-size: calcRem(30px);
+      @include lineHeight(30px, 30px);
+      transition: color 0.15s cubic-bezier(0.48, 0.06, 0.48, 0.06);
+      &:hover {
+        color: $coral-red;
+      }
+    }
+  }
 
-    &__logo {
-      a {
-        color: $text-dark-gray;
-        font-family: $pp-semibold;
-        font-size: calcRem(30px);
-        @include lineHeight(30px, 30px);
-        transition: color 0.15s ease-in;
-        &:hover {
-          color: $coral-red;
+  // - mobile hamburger menu
+  .mobile-menu {
+    @include flex();
+    width: calcRem(30px);
+    height: calcRem(23px);
+    top: calcRem(33px);
+    right: calcRem(33px);
+    z-index: 1;
+    cursor: pointer;
+    @include bp(tablet-sm-up) {
+      display: none;
+    }
+    &__item {
+      width: calcRem(30px);
+      height: calcRem(4px);
+      background-color: $text-dark-gray;
+      border-radius: calcRem(5px);
+      transition: background-color 0.1s cubic-bezier(0.48, 0.06, 0.48, 0.06)
+        0.3s;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: calcRem(30px);
+        height: calcRem(4px);
+        background-color: $text-dark-gray;
+        border-radius: calcRem(5px);
+        transition: transform 0.25s cubic-bezier(0.76, 0.01, 0.29, 1) 0.25s;
+      }
+      &::before {
+        transform: translateY(-8px);
+      }
+      &::after {
+        transform: translateY(8px);
+      }
+      // - hamburger -> x when active
+      &.mobile--active {
+        background-color: transparent;
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
         }
       }
+    }
+  }
+
+  // - navigation
+  .nav {
+    @include flex(column, center, center);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transform: translateX(100%);
+    transition: all 0.4s cubic-bezier(0.75, 0, 0.23, 1);
+    background-color: $gains-boro;
+    @include bp(tablet-sm-up) {
+      position: static;
+      height: auto;
+      background-color: transparent;
+      transform: translateX(0);
+    }
+
+    &-mobile--active {
+      transform: translateX(0);
+      transition: all 0.4s cubic-bezier(0.75, 0, 0.23, 1);
     }
 
     &__list-container {
       @include flex(column);
+      padding: 0 calcRem(30px);
       @include bp(tablet-sm-up) {
         @include flex(row);
+        padding: 0;
       }
       li {
         color: $text-dark-gray;
         &:nth-child(2) {
-          margin: 0 calcRem(23px);
+          margin: calcRem(50px) 0;
+          @include bp(tablet-sm-up) {
+            margin: 0 calcRem(23px);
+          }
         }
       }
     }
@@ -45,7 +120,7 @@
         font-family: $pp-regular;
         font-size: calcRem(18px);
         @include lineHeight(18px, 18px);
-        transition: color 0.1s ease-in 0.15s;
+        transition: color 0.15s cubic-bezier(0.77, 0.14, 0.71, 0.19) 0.15s;
         &:hover {
           color: $cornsilk;
           & ~ .red-line {

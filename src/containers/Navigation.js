@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
 
-import NavigationItem from "../components/NavigationItem/NavigationItem";
+import NavigationItem from "components/NavigationItem/NavigationItem";
+import Backdrop from "layout/Backdrop";
 
 function Navigation() {
-  const isMobileDevice = useMediaQuery({
-    query: "(max-device-width: 767px)",
-  });
+  const [isMobileNavOpen, setIsMobileNavOPen] = useState(false);
 
   const navigationMenuItems = ["works", "blog", "about"];
 
-  console.log(isMobileDevice);
+  const toggleMobileNavHandler = () => {
+    setIsMobileNavOPen((prevState) => !prevState);
+  };
+  const closeMobileNavHandler = () => {
+    setIsMobileNavOPen(false);
+  };
+
   return (
     <header className='header'>
-      <nav className='nav'>
-        <span className='nav__logo'>
-          <Link to='/'>dk</Link>
-        </span>
+      <span className='header__logo'>
+        <Link to='/'>dk</Link>
+      </span>
+
+      <div className='mobile-menu' onClick={toggleMobileNavHandler}>
+        <span
+          className={`mobile-menu__item ${
+            isMobileNavOpen ? "mobile--active" : ""
+          }`}
+        ></span>
+      </div>
+
+      <nav className={`nav ${isMobileNavOpen ? "nav-mobile--active" : ""}`}>
         <ul className='nav__list-container'>
           {navigationMenuItems.map((linkItem, i) => (
             <NavigationItem key={i} linkItem={linkItem} />
           ))}
         </ul>
       </nav>
+
+      <Backdrop
+        toggleBackdrop={isMobileNavOpen}
+        backdropHandler={closeMobileNavHandler}
+      />
     </header>
   );
 }
