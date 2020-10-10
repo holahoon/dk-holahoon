@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import Home from "containers/Home";
 import Works from "containers/Works";
+import Blog from "containers/Blog";
 import About from "containers/About";
 
 function AppRouter({ language }) {
@@ -14,6 +15,9 @@ function AppRouter({ language }) {
         </Route>
         <Route path='/works'>
           <Works />
+        </Route>
+        <Route path='/blog'>
+          <Blog />
         </Route>
         <Route path='/about'>
           <About />

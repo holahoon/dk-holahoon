@@ -10,21 +10,56 @@
   z-index: 1;
 
   .nav {
-    @include flex(row, space-between, center);
+    @include flex(row, space-between, flex-end);
 
-    &__list-container {
-      @include flex(row);
-
-      li {
+    &__logo {
+      a {
         color: $text-dark-gray;
-        &:last-child {
-          margin-left: calcRem(30px);
+        font-family: $pp-semibold;
+        font-size: calcRem(30px);
+        @include lineHeight(30px, 30px);
+        transition: color 0.15s ease-in;
+        &:hover {
+          color: $coral-red;
         }
       }
     }
 
-    a {
-      color: $text-black;
+    &__list-container {
+      @include flex(column);
+      @include bp(tablet-sm-up) {
+        @include flex(row);
+      }
+      li {
+        color: $text-dark-gray;
+        &:nth-child(2) {
+          margin: 0 calcRem(23px);
+        }
+      }
+    }
+
+    &__item {
+      position: relative;
+      a {
+        color: $text-dark-gray;
+        font-family: $pp-regular;
+        font-size: calcRem(18px);
+        @include lineHeight(18px, 18px);
+        transition: color 0.1s ease-in 0.15s;
+        &:hover {
+          color: $cornsilk;
+          & ~ .red-line {
+            height: 100%;
+            width: 110%;
+            left: -5%;
+          }
+        }
+      }
+      .red-line {
+        @include red-line;
+        height: 0;
+        bottom: 0;
+      }
     }
   }
 }

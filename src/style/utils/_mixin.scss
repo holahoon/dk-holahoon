@@ -65,3 +65,14 @@ $max-width: 1440px;
 @mixin max-width {
   max-width: $max-width;
 }
+
+/* -- red highlight box -- */
+@mixin red-line {
+  width: 100%;
+  background-color: $coral-red;
+  border-radius: calcRem(3px);
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  transition: all 0.2s ease-in;
+}

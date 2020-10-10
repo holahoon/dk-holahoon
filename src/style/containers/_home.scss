@@ -3,12 +3,9 @@
   height: 100%;
 
   &__content-container {
-    padding: 0 7px;
+    padding: 0 calcRem(7px);
     @include bp(mobile-lg-up) {
-      padding: 0 10px;
-    }
-    @include bp(tablet-sm-up) {
-      // padding: 0 10px;
+      padding: 0 calcRem(10px);
     }
   }
 
@@ -55,15 +52,9 @@
             }
           }
           .red-line {
-            width: 100%;
+            @include red-line;
             height: calcRem(13px);
-            background-color: $coral-red;
-            border-radius: calcRem(3px);
-            position: absolute;
-            left: 0;
             bottom: calcRem(4px);
-            z-index: -1;
-            transition: all 0.2s ease-in;
             @include bp(tablet-sm-up) {
               height: calcRem(20px);
               bottom: calcRem(6px);
@@ -147,15 +138,9 @@
             }
           }
           .red-line {
-            width: 100%;
+            @include red-line;
             height: calcRem(12px);
-            background-color: $coral-red;
-            border-radius: calcRem(3px);
-            position: absolute;
-            left: 0;
             bottom: calcRem(3px);
-            z-index: -1;
-            transition: all 0.2s ease-in;
             @include bp(tablet-sm-up) {
               height: calcRem(15px);
               bottom: calcRem(3px);

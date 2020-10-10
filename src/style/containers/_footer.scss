@@ -5,10 +5,14 @@
   left: auto;
   right: auto;
   width: 100%;
-  @include flex(row, space-between, center);
-  margin-bottom: calcRem(20px);
+  @include flex(column, space-between, center);
+  margin-bottom: calcRem(5px);
   padding: 0 calcRem(30px);
   z-index: 1;
+  @include bp(tablet-sm-up) {
+    @include flex(row, space-between, center);
+    margin-bottom: calcRem(20px);
+  }
 
   .switch {
     @include flex(row);
@@ -20,22 +24,30 @@
       margin: 0 calcRem(10px);
     }
     &__en {
+      font-family: $heebo-regular;
+      font-weight: 700;
       padding: calcRem(5px);
       cursor: pointer;
       transition: color 0.2s ease;
       &--active {
+        font-family: $heebo-regular;
+        font-weight: normal;
         padding: calcRem(5px);
-        color: $text-red;
+        color: $coral-red;
         transition: color 0.2s ease;
       }
     }
     &__kr {
+      font-family: $heebo-regular;
+      font-weight: 700;
       padding: calcRem(5px);
       cursor: pointer;
       transition: color 0.2s ease;
       &--active {
+        font-family: $heebo-regular;
+        font-weight: normal;
         padding: calcRem(5px);
-        color: $text-red;
+        color: $coral-red;
         transition: color 0.2s ease;
       }
     }
@@ -43,8 +55,11 @@
 
   &__copyright {
     color: $text-light-gray;
-    font-size: calcRem(13px);
-    font-family: $pp-regular;
+    font-size: calcRem(12px);
+    font-family: $heebo-regular;
+    @include bp(tablet-sm-up) {
+      font-size: calcRem(13px);
+    }
 
     &__english {
       font-family: $pp-semibold;

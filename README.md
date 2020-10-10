@@ -8,6 +8,7 @@
 [framer-motion]
 [Sass]
 [react-icons]
+[react-responsive](https://github.com/contra/react-responsive)
 
 ### Modifications
 
