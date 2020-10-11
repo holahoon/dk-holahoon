@@ -6,9 +6,16 @@
   left: auto;
   right: auto;
   width: 100%;
-  margin: calcRem(30px) auto 0 auto;
-  padding: 0 calcRem(30px);
+  margin: 0 auto;
+  padding: calcRem(25px) calcRem(30px) calcRem(20px);
   z-index: 1;
+  transition: all 0.5s ease;
+
+  &--sticky {
+    @extend .header;
+    background-color: $gains-boro;
+    opacity: 0.97;
+  }
 
   // - dk logo
   &__logo {

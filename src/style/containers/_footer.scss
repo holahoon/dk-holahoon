@@ -1,17 +1,22 @@
 .footer {
   @include max-width;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: auto;
   right: auto;
+  background-color: $cornsilk;
   width: 100%;
   @include flex(column, space-between, center);
-  margin-bottom: calcRem(5px);
-  padding: 0 calcRem(30px);
+  padding: 0 calcRem(30px) calcRem(5px);
   z-index: 0;
   @include bp(tablet-sm-up) {
     @include flex(row, space-between, center);
-    margin-bottom: calcRem(20px);
+    padding-bottom: calcRem(20px);
+  }
+
+  &--fixed {
+    @extend .footer;
+    position: fixed;
   }
 
   .switch {

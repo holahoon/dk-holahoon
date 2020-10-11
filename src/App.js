@@ -25,8 +25,8 @@ function App() {
           <Router>
             <Navigation />
             <AppRouter />
+            <Footer />
           </Router>
-          <Footer />
         </Layout>
       </LanguageContext.Provider>
     </>

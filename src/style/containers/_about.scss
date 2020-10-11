@@ -1,0 +1,74 @@
+.about {
+  padding: calcRem(80px) 0 calcRem(60px);
+  font-family: $bc-light;
+  background-color: $cornsilk;
+
+  &__english-introduction,
+  &__korean-introduction {
+    max-width: 600px;
+    margin: 0 auto calcRem(20px);
+    padding: 0 calcRem(15px);
+    @include bp(tablet-sm-up) {
+      padding: 0;
+    }
+    > h2,
+    p {
+      display: inline-block;
+    }
+  }
+
+  &__english-introduction {
+    h2 {
+      margin-bottom: calcRem(10px);
+      font-size: calcRem(20px);
+      @include bp(tablet-sm-up) {
+        font-size: calcRem(27px);
+      }
+      span {
+        font-size: calcRem(15px);
+        @include bp(tablet-sm-up) {
+          font-size: calcRem(20px);
+        }
+      }
+    }
+    h3 {
+      margin-bottom: calcRem(20px);
+    }
+    p {
+      margin: calcRem(7px) 0;
+      font-family: $bc-light;
+      font-size: calcRem(17px);
+      @include lineHeight(19px, 25px);
+      @include bp(tablet-sm-up) {
+        font-size: calcRem(19px);
+      }
+    }
+  }
+
+  &__korean-introduction {
+    h2 {
+      margin-bottom: calcRem(10px);
+      font-size: calcRem(20px);
+      @include bp(tablet-sm-up) {
+        font-size: calcRem(30px);
+      }
+      span {
+        font-size: calcRem(15px);
+        @include bp(tablet-sm-up) {
+          font-size: calcRem(20px);
+        }
+      }
+    }
+    h3 {
+      margin-bottom: calcRem(20px);
+    }
+    p {
+      margin: calcRem(7px) 0;
+      font-size: calcRem(16px);
+      @include lineHeight(18px, 30px);
+      @include bp(tablet-sm-up) {
+        font-size: calcRem(18px);
+      }
+    }
+  }
+}
