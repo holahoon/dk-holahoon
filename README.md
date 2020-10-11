@@ -8,6 +8,7 @@
 [framer-motion]
 [Sass]
 [react-icons]
+[react-lottie](https://github.com/chenqingspring/react-lottie#readme)
 
 ### Modifications
 

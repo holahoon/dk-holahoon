@@ -1,0 +1,55 @@
+.lottie-container {
+  margin-bottom: calcRem(40px);
+  > div {
+    max-width: 200px;
+    max-height: 200px;
+    @include bp(tablet-sm-up) {
+      max-width: 300px;
+      max-height: 300px;
+    }
+  }
+}
+
+.social-contact {
+  max-width: calcRem(600px);
+  margin: 0 auto;
+  &__container {
+    @include flex(row, center, center);
+    a {
+      @include flex();
+      width: calcRem(60px);
+      color: $text-dark-gray;
+      font-family: $bc-bold;
+      @include bp(tablet-sm-up) {
+        width: calcRem(100px);
+      }
+      &:nth-child(2) {
+        margin: 0 calcRem(30px);
+      }
+      &:hover {
+        > svg {
+          color: $coral-red;
+        }
+        > span {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      svg {
+        width: calcRem(35px);
+        height: 100%;
+        transition: all 0.2s cubic-bezier(0.48, 0.06, 0.48, 0.06);
+        @include bp(tablet-sm-up) {
+          width: calcRem(50px);
+        }
+      }
+      span {
+        transform: translateY(10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s cubic-bezier(0.77, 0.14, 0.71, 0.19) 0.1s;
+      }
+    }
+  }
+}

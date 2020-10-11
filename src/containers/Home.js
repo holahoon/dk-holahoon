@@ -46,7 +46,7 @@ function Home() {
   const message =
     language === "en" ? (
       <p className='english-message'>
-        'til my one line of code today to brighten up tomorrow
+        'til my one line of code today brightens up tomorrow
       </p>
     ) : (
       <p className='korean-message'>오늘 한줄의 코드로 밝아질 내일을 위하여</p>
@@ -59,7 +59,7 @@ function Home() {
 
         <div className='home__message-container'>
           {message}
-          <p className='hustle'>Hustle n' Code</p>
+          <p className='hustle'>Hustle 'n Code</p>
         </div>
       </div>
     </main>
