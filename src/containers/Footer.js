@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 
 import { LanguageContext } from "hooks/LanguageContext";
-import LanguageSwitch from "components/languageSwitch/LanguageSwitch";
 
 function Footer() {
   const { languageHandler } = useContext(LanguageContext);
@@ -17,7 +16,6 @@ function Footer() {
 
   return (
     <footer className={`footer${pathname === "/" ? "--fixed" : ""}`}>
-      <LanguageSwitch />
       <span className='footer__copyright'>
         © {currentYear} all rights reserved,{" "}
         {language === "en" ? englishName : koreanName}.

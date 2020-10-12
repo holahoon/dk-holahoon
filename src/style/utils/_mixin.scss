@@ -1,5 +1,5 @@
 /* -- Media queries -- */
-$mobile-sm: 360px;
+$mobile-sm: 375px;
 $mobile-lg: 414px;
 $tablet-sm: 768px;
 $tablet-lg: 1024px;
@@ -9,7 +9,7 @@ $max-width: 1440px;
 @mixin bp($point, $viewport: 0) {
   /* -- Min-width -- */
   @if $point == mobile-sm-up {
-    @media (min-width: $mobile-sm + 1) {
+    @media (min-width: $mobile-sm) {
       @content;
     }
   } @else if $point == mobile-lg-up {
@@ -74,5 +74,5 @@ $max-width: 1440px;
   position: absolute;
   left: 0;
   z-index: -1;
-  transition: all 0.25s cubic-bezier(0.77, 0.14, 0.71, 0.19);
+  transition: all 0.2s cubic-bezier(0.77, 0.14, 0.71, 0.19);
 }

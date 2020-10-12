@@ -1,6 +1,5 @@
 .home {
   @include flex();
-  height: 100%;
   background-color: $cornsilk;
 
   &__content-container {
@@ -44,7 +43,7 @@
           }
           a {
             color: $text-black;
-            transition: color 0.15s cubic-bezier(0.77, 0.14, 0.71, 0.19) 0.15s;
+            transition: color 0.15s cubic-bezier(0.77, 0.14, 0.71, 0.19) 0.1s;
             &:hover {
               color: $cornsilk;
               & ~ .red-line {
@@ -64,18 +63,21 @@
         }
       }
       &-title {
-        @include fontSize(32px);
+        @include fontSize(28px);
         font-family: $pp-regular;
-        @include lineHeight(32px, 36px);
+        @include lineHeight(30px, 34px);
         @include bp(tablet-sm-up) {
           @include fontSize(50px);
           @include lineHeight(50px, 55px);
         }
         &__fe {
-          @include fontSize(30px);
+          @include fontSize(28px);
           font-family: $pp-semibold;
           color: $text-black;
           position: relative;
+          @include bp(mobile-sm-up) {
+            @include fontSize(30px);
+          }
           @include bp(tablet-sm-up) {
             @include fontSize(62px);
           }
@@ -130,7 +132,7 @@
           }
           a {
             color: $text-black;
-            transition: color 0.15s cubic-bezier(0.77, 0.14, 0.71, 0.19) 0.15s;
+            transition: color 0.15s cubic-bezier(0.77, 0.14, 0.71, 0.19) 0.1s;
             &:hover {
               color: $cornsilk;
               & ~ .red-line {

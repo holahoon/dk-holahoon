@@ -3,25 +3,26 @@ import { Link } from "react-router-dom";
 import _ from "lodash";
 
 import NavigationItem from "components/NavigationItem/NavigationItem";
+import LanguageSwitch from "components/languageSwitch/LanguageSwitch";
 import Backdrop from "layout/Backdrop";
 
 function Navigation() {
   const [isMobileNavOpen, setIsMobileNavOPen] = useState(false);
   const [navBackground, setNavBackground] = useState(false);
   const headerRef = useRef(null);
-  const navigationMenuItems = ["works", "blog", "about"];
+  const navigationMenuItems = ["works", "about", "blog"];
 
   useEffect(() => {
     window.addEventListener("scroll", lodashScrollHandler);
     return () => window.removeEventListener("scroll", lodashScrollHandler);
-  }, []);
+  });
 
-  const toggleMobileNavHandler = () => {
+  const toggleMobileNavHandler = useCallback(() => {
     setIsMobileNavOPen((prevState) => !prevState);
-  };
-  const closeMobileNavHandler = () => {
+  }, []);
+  const closeMobileNavHandler = useCallback(() => {
     setIsMobileNavOPen(false);
-  };
+  }, []);
   const lodashScrollHandler = useCallback(
     _.throttle(() => {
       let pageYOffset = window.pageYOffset;
@@ -60,6 +61,8 @@ function Navigation() {
             />
           ))}
         </ul>
+
+        <LanguageSwitch closeMobilenav={closeMobileNavHandler} />
       </nav>
 
       <Backdrop

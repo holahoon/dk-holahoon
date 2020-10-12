@@ -1,0 +1,17 @@
+.works {
+  padding: calcRem(80px) 0 calcRem(30px);
+  &__projects-container {
+    .production {
+    }
+
+    .personal {
+    }
+
+    .project {
+      img {
+        max-width: 300px;
+        width: 100%;
+      }
+    }
+  }
+}

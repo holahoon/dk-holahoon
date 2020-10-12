@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 function Backdrop({ toggleBackdrop, backdropHandler }) {
   return (
@@ -13,4 +13,4 @@ function Backdrop({ toggleBackdrop, backdropHandler }) {
   );
 }
 
-export default Backdrop;
+export default memo(Backdrop);

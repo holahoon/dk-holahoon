@@ -19,45 +19,6 @@
     position: fixed;
   }
 
-  .switch {
-    @include flex(row);
-    color: $text-black;
-    font-size: calcRem(17px);
-    cursor: default;
-
-    &__slash {
-      margin: 0 calcRem(10px);
-    }
-    &__en {
-      font-family: $heebo-regular;
-      font-weight: 700;
-      padding: calcRem(5px);
-      cursor: pointer;
-      transition: color 0.2s ease;
-      &--active {
-        font-family: $heebo-regular;
-        font-weight: normal;
-        padding: calcRem(5px);
-        color: $coral-red;
-        transition: color 0.2s ease;
-      }
-    }
-    &__kr {
-      font-family: $heebo-regular;
-      font-weight: 700;
-      padding: calcRem(5px);
-      cursor: pointer;
-      transition: color 0.2s ease;
-      &--active {
-        font-family: $heebo-regular;
-        font-weight: normal;
-        padding: calcRem(5px);
-        color: $coral-red;
-        transition: color 0.2s ease;
-      }
-    }
-  }
-
   &__copyright {
     color: $text-light-gray;
     font-size: calcRem(12px);

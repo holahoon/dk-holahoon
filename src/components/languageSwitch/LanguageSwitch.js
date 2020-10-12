@@ -1,33 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 
 import { LanguageContext } from "hooks/LanguageContext";
 
-function LanguageSwitch() {
+function LanguageSwitch({ closeMobilenav }) {
   const { languageHandler } = useContext(LanguageContext);
-  const [language, setLanguage] = languageHandler;
+  const [isLanguageKorean, setIsLanguageKorean] = languageHandler;
 
-  // - if language is set to the same language, don't update the state so the component doesn't rerender unnecessarily
-  const setLanguageKoreanHandler = () => language !== "kr" && setLanguage("kr");
-  const setLanguageEnglishHandler = () =>
-    language !== "en" && setLanguage("en");
+  const onLanguageChangeHandler = (e) => {
+    const {
+      target: { checked },
+    } = e;
+    setIsLanguageKorean(checked);
+  };
 
   return (
     <div className='switch'>
-      <span
-        className={`switch__en${language === "en" ? "--active" : ""}`}
-        onClick={setLanguageEnglishHandler}
-      >
-        Eng
-      </span>
-      <span className='switch__slash'>/</span>
-      <span
-        className={`switch__kr${language === "kr" ? "--active" : ""}`}
-        onClick={setLanguageKoreanHandler}
-      >
-        Kor
-      </span>
+      <input
+        type='checkbox'
+        className='toggle'
+        value={isLanguageKorean}
+        onChange={onLanguageChangeHandler}
+        onClick={closeMobilenav}
+      />
     </div>
   );
 }
 
-export default LanguageSwitch;
+export default memo(LanguageSwitch);

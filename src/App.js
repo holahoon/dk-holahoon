@@ -9,16 +9,14 @@ import Footer from "containers/Footer";
 
 import "./style/main.scss";
 
-// const works = ["work1", "work2", "work3"];
-
 function App() {
-  const [language, setLanguage] = useState("en");
+  const [isLanguageKorean, setIsLanguageKorean] = useState(false);
 
   return (
     <>
       <LanguageContext.Provider
         value={{
-          languageHandler: [language, setLanguage],
+          languageHandler: [isLanguageKorean, setIsLanguageKorean],
         }}
       >
         <Layout>

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Lottie from "react-lottie";
 
 import animationData from "assets/images/lottie/mongryong-hi.json";
 
 function LottieHi() {
+  const [playAnimation, setPlayAnimation] = useState(false);
+
   const defaultOptions = {
-    loop: true,
+    loop: playAnimation,
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
@@ -13,14 +15,19 @@ function LottieHi() {
     },
   };
 
+  useEffect(() => {
+    const animationInterval = setInterval(() => {
+      setPlayAnimation((prev) => !prev);
+    }, 3000);
+    return () => clearInterval(animationInterval);
+  }, []);
+
   return (
     <div className='lottie-container'>
       <Lottie
         options={defaultOptions}
-        //   height={300}
-        //   width={300}
-        isStopped={false}
-        isPaused={false}
+        isStopped={playAnimation}
+        isPaused={playAnimation}
       />
     </div>
   );

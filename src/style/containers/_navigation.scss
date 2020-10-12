@@ -15,6 +15,10 @@
     @extend .header;
     background-color: $gains-boro;
     opacity: 0.97;
+    @include bp(tablet-lg-up) {
+      background-color: transparent;
+      opacity: 1;
+    }
   }
 
   // - dk logo
@@ -91,6 +95,7 @@
     transition: all 0.4s cubic-bezier(0.75, 0, 0.23, 1);
     background-color: $gains-boro;
     @include bp(tablet-sm-up) {
+      @include flex(row, center, center);
       position: static;
       height: auto;
       background-color: transparent;
@@ -98,16 +103,18 @@
     }
 
     &-mobile--active {
+      padding: 0 calcRem(30px);
       transform: translateX(0);
       transition: all 0.4s cubic-bezier(0.75, 0, 0.23, 1);
     }
 
     &__list-container {
       @include flex(column);
-      padding: 0 calcRem(30px);
+      margin-bottom: calcRem(50px);
       @include bp(tablet-sm-up) {
         @include flex(row);
-        padding: 0;
+        margin-right: calcRem(60px);
+        margin-bottom: 0;
       }
       li {
         color: $text-dark-gray;
