@@ -10,7 +10,7 @@
   padding: 0 calcRem(30px) calcRem(5px);
   z-index: 0;
   @include bp(tablet-sm-up) {
-    @include flex(row, space-between, center);
+    @include flex(row, flex-end, center);
     padding-bottom: calcRem(20px);
   }
 
