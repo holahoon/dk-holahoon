@@ -1,17 +1,17 @@
-## Language Used
+# DK's portfolio
 
-[React.js](https://reactjs.org/)
+## Language
 
-## Dependencies
+### Library
+- [React.js](https://reactjs.org/)
 
-[react-router-dom]
-[framer-motion]
-[Sass]
-[react-icons]
-[react-lottie](https://github.com/chenqingspring/react-lottie#readme)
-[lodash]
-
-### Modifications
+### Dependencies
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start)
+- [framer-motion](https://www.framer.com/motion/)
+- [Sass](https://sass-lang.com/)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [react-lottie](https://github.com/chenqingspring/react-lottie#readme)
+- [lodash](https://lodash.com/)
 
 It is using [absolute imports](https://create-react-app.dev/docs/importing-a-component/) to improve readability of the imported files.
 
