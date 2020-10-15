@@ -3,7 +3,7 @@
 ## Language
 
 ### Library
-- [React.js](https://reactjs.org/)
+- [React.js](https://reactjs.org/) - built with `create-react-app`
 
 ### Dependencies
 - [react-router-dom](https://reactrouter.com/web/guides/quick-start)
