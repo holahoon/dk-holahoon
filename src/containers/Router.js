@@ -5,6 +5,7 @@ import Home from "containers/Home";
 import Works from "containers/Works";
 import Blog from "containers/Blog";
 import About from "containers/About";
+import ProjectPage from "components/projectPage/ProjectPage";
 
 function AppRouter({ language }) {
   return (
@@ -15,6 +16,9 @@ function AppRouter({ language }) {
         </Route>
         <Route path='/works'>
           <Works />
+        </Route>
+        <Route path='/works/:projectId'>
+          <ProjectPage />
         </Route>
         <Route path='/blog'>
           <Blog />
