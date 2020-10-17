@@ -27,7 +27,6 @@ function Works() {
     },
   ];
 
-  console.log(location);
   return (
     <div className='works'>
       <section className='works__projects-container'>
