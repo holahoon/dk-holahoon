@@ -3,16 +3,23 @@
   &__projects-container {
     max-width: 600px;
     margin: 0 auto;
-    .production {
-    }
+    // .production {
+    // }
 
-    .personal {
-    }
+    // .personal {
+    // }
 
     .project {
+      a {
+        @include flex();
+        width: 300px;
+        height: 230px;
+        border-radius: calcRem(20px);
+        color: $text-light-gray;
+      }
       img {
-        max-width: 300px;
         width: 100%;
+        max-width: 250px;
       }
     }
   }

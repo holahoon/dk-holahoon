@@ -1,12 +1,16 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 
-function ProjectPage() {
-  const location = useLocation();
+function ProjectPage(props) {
+  const {
+    match: {
+      params: { projectId },
+    },
+  } = props;
 
   return (
     <div>
-      <h1>{location.pathname}</h1>
+      <h1>{projectId}</h1>
+      <h2>this is project page</h2>
     </div>
   );
 }

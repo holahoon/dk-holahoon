@@ -7,7 +7,7 @@
 
 ### Dependencies
 - [react-router-dom](https://reactrouter.com/web/guides/quick-start)
-- [framer-motion](https://www.framer.com/motion/)
+- [react-transition-group](https://reactcommunity.org/react-transition-group/)
 - [Sass](https://sass-lang.com/)
 - [react-icons](https://react-icons.github.io/react-icons/)
 - [react-lottie](https://github.com/chenqingspring/react-lottie#readme)
