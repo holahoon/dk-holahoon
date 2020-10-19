@@ -1,12 +1,15 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 
+import useWindowsHeight from "hooks/useWindowsHeight";
 import { dkData } from "components/data/dkData";
 import ProjectPage from "components/projectPage/ProjectPage";
 
 function Works({ match }) {
+  const windowInnerHeight = useWindowsHeight();
+
   return (
-    <div className='works'>
+    <div className='works' style={{ height: `${windowInnerHeight}px` }}>
       <section className='works__projects-container'>
         {dkData.map((project, index) => {
           const { pageUrl, title, image, backgroundColor } = project;

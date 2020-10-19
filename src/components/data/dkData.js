@@ -21,4 +21,22 @@ export const dkData = [
     description: "blah blah",
     backgroundColor: "#FF9AA2",
   },
+  {
+    pageUrl: "old-holahoon",
+    title: "Developer - old DK",
+    image: project_holahoon,
+    url: "https://www.google.com/",
+    github: "https://github.com/holahoon/new-holahoon",
+    description: "blah blah",
+    backgroundColor: "#FF9AA2",
+  },
+  {
+    pageUrl: "old-holahoon",
+    title: "Developer - old DK",
+    image: project_holahoon,
+    url: "https://www.google.com/",
+    github: "https://github.com/holahoon/new-holahoon",
+    description: "blah blah",
+    backgroundColor: "#FF9AA2",
+  },
 ];

@@ -8,7 +8,7 @@ function ProjectPage(props) {
   } = props;
 
   return (
-    <div>
+    <div className='project-page'>
       <h1>{projectId}</h1>
       <h2>this is project page</h2>
     </div>

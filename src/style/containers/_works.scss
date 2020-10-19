@@ -1,27 +1,33 @@
 .works {
   padding: calcRem(80px) 0 calcRem(30px);
   &__projects-container {
-    max-width: 600px;
+    @include flex(row);
+    flex-wrap: wrap;
+    max-width: 1000px;
     margin: 0 auto;
-    // .production {
-    // }
-
-    // .personal {
-    // }
-
+    @include bp(desktop-sm-up) {
+      @include flex(row, flex-start);
+    }
     .project {
+      margin: calcRem(10px);
       a {
         @include flex();
         width: 300px;
         height: 230px;
-        border-radius: calcRem(20px);
+        border-radius: calcRem(15px);
         color: $text-black;
         font-family: $bc-bold;
       }
       img {
         width: 100%;
         max-width: 250px;
+        border-radius: calcRem(10px);
       }
     }
+  }
+
+  // - project pages
+  .project-page {
+    position: absolute;
   }
 }

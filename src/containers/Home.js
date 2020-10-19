@@ -1,27 +1,12 @@
-import React, { useState, useEffect, useContext, useCallback } from "react";
-import _ from "lodash";
+import React, { useContext } from "react";
 
+import useWindowsHeight from "hooks/useWindowsHeight";
 import { LanguageContext } from "hooks/LanguageContext";
 
 function Home() {
-  const [windowInnerHeight, setWindowInnerHeight] = useState(0);
+  const windowInnerHeight = useWindowsHeight();
   const { languageHandler } = useContext(LanguageContext);
   const isLanguageKorean = languageHandler[0];
-
-  useEffect(() => {
-    setWindowInnerHeight(window.innerHeight);
-  }, []);
-  useEffect(() => {
-    window.addEventListener("resize", innerHeightHandler);
-    return () => window.removeEventListener("resize", innerHeightHandler);
-  });
-
-  const innerHeightHandler = useCallback(
-    _.debounce(() => {
-      setWindowInnerHeight(window.innerHeight);
-    }, 200),
-    []
-  );
 
   // Greetings message in en/kr
   const greetings = isLanguageKorean ? (
