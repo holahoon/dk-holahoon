@@ -11,17 +11,22 @@
     .project {
       margin: calcRem(10px);
       a {
-        @include flex();
+        @include flex(column, flex-start, start);
         width: 300px;
-        height: 230px;
-        border-radius: calcRem(15px);
+        height: 200px;
+        position: relative;
+        border-radius: calcRem(5px);
         color: $text-black;
         font-family: $bc-bold;
-      }
-      img {
-        width: 100%;
-        max-width: 250px;
-        border-radius: calcRem(10px);
+        img {
+          width: 100%;
+          // max-width: 250px;
+        }
+        span {
+          position: absolute;
+          top: calcRem(10px);
+          left: calcRem(10px);
+        }
       }
     }
   }

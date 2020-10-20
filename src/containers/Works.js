@@ -12,15 +12,12 @@ function Works({ match }) {
     <div className='works' style={{ height: `${windowInnerHeight}px` }}>
       <section className='works__projects-container'>
         {dkData.map((project, index) => {
-          const { pageUrl, title, image, backgroundColor } = project;
+          const { pageUrl, title, image } = project;
           return (
             <div className='project' key={index}>
-              <Link
-                to={`${match.path}/${pageUrl}`}
-                style={{ backgroundColor: backgroundColor }}
-              >
+              <Link to={`${match.path}/${pageUrl}`}>
                 <img src={image} alt={title} />
-                <h3>{title}</h3>
+                <span>{title}</span>
               </Link>
             </div>
           );
