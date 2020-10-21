@@ -10,13 +10,16 @@
   padding: calcRem(25px) calcRem(30px) calcRem(20px);
   z-index: 1;
   transition: all 0.5s ease;
+  // @include bp(tablet-lg-up) {
+  //   position: relative;
+  // }
 
   &--sticky {
     @extend .header;
     background-color: $gains-boro;
     opacity: 0.97;
     @include bp(tablet-lg-up) {
-      background-color: transparent;
+      // background-color: transparent;
       opacity: 1;
     }
   }

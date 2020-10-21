@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
     @include bp(desktop-sm-up) {
       @include flex(row, flex-start);
     }
@@ -29,6 +30,59 @@
 
   // - project pages
   .project-page {
+    @include flex(column);
+    width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+
+    &__detail {
+      @include flex(column, flex-start, flex-start);
+      max-width: calcRem(650px);
+      .title {
+        font-size: calcRem(30px);
+        > a {
+          color: $text-black;
+        }
+      }
+      .image {
+        display: inline-block;
+        margin: calcRem(20px) auto calcRem(30px);
+        img {
+          width: 100%;
+        }
+      }
+      .description {
+        font-family: $gm-medium;
+        color: $text-dark-gray;
+        > a {
+          display: inline-block;
+          position: relative;
+          color: $text-dark-gray;
+          z-index: 0;
+          transition: color 0.15s cubic-bezier(0.77, 0.14, 0.71, 0.19) 0.1s;
+          &:hover {
+            color: $cornsilk;
+            & .red-line {
+              height: 100%;
+            }
+          }
+          > svg {
+            vertical-align: middle;
+          }
+          .red-line {
+            @include red-line;
+            height: calcRem(12px);
+            bottom: calcRem(3px);
+            @include bp(tablet-sm-up) {
+              height: calcRem(1px);
+              bottom: 0;
+            }
+          }
+        }
+      }
+      a {
+      }
+    }
   }
 }

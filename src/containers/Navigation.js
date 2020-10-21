@@ -27,7 +27,7 @@ function Navigation() {
     _.throttle(() => {
       let pageYOffset = window.pageYOffset;
       const headerHeight = headerRef.current.offsetHeight;
-      pageYOffset > headerHeight * 1.05
+      pageYOffset > headerHeight * 0.7
         ? setNavBackground(true)
         : setNavBackground(false);
     }, 200),
