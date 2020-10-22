@@ -1,15 +1,14 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { dkData } from "components/data/dkData";
 import useWindowsHeight from "hooks/useWindowsHeight";
-import ProjectPage from "components/projectPage/ProjectPage";
 
 function Works({ match }) {
   const windowInnerHeight = useWindowsHeight();
 
   return (
-    <div className='works' style={{ height: `${windowInnerHeight}px` }}>
+    <div className='works' style={{ minHeight: `${windowInnerHeight}px` }}>
       <section className='works__projects-container'>
         {dkData.map(({ pageUrl, title, image }, index) => (
           <div className='project' key={index}>
@@ -19,10 +18,6 @@ function Works({ match }) {
             </Link>
           </div>
         ))}
-
-        <Route path={`${match.path}/:projectId`}>
-          <ProjectPage dkData={dkData} />
-        </Route>
       </section>
     </div>
   );
