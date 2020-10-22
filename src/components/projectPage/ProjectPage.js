@@ -12,11 +12,14 @@ function ProjectPage({ dkData }) {
         .filter(({ pageUrl }) => pageUrl === projectId)
         .map(({ title, description, linkUrl, githubUrl, image }) => (
           <div key={title} className='project-page__detail'>
-            <h2 className='title'>
-              <a href={linkUrl} target='_blank' rel='noopener noreferrer'>
-                {title}
-              </a>
-            </h2>
+            <a
+              className='title'
+              href={linkUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {title}
+            </a>
             <a
               className='image'
               href={linkUrl}
