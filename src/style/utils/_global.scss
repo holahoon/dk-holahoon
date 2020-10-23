@@ -36,6 +36,10 @@ button {
   outline: none;
 }
 
+img {
+  object-fit: contain;
+}
+
 #root {
   background-color: $cornsilk;
 }

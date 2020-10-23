@@ -1,44 +1,41 @@
 .works {
-  padding: calcRem(100px) 0 calcRem(30px);
-
-  &__page-title {
-    // max-width: calcRem(1000px);
-    max-width: calcRem(980px);
-    margin: calcRem(10px) auto calcRem(30px);
-    padding-bottom: calcRem(20px);
-    font-family: $pp-regular;
-    font-size: calcRem(22px);
-    color: $text-dark-gray;
-    border-bottom: 1px solid $text-lighter-gray;
-  }
+  padding: calcRem(80px) 0 calcRem(30px);
 
   &__projects-container {
     @include flex(row);
     flex-wrap: wrap;
     max-width: calcRem(1000px);
-    margin: 0 auto;
+    margin: calcRem(60px) auto 0;
     @include bp(desktop-sm-up) {
       @include flex(row, flex-start);
     }
     .project {
       margin: calcRem(10px) calcRem(15px) calcRem(25px);
       @include bp(desktop-sm-up) {
-        margin: calcRem(10px);
+        margin: calcRem(10px) calcRem(15px) calcRem(40px);
       }
       a {
         @include flex(column, flex-start, flex-start);
         width: 100%;
         border-radius: calcRem(5px);
         color: $text-black;
-        font-family: $bc-bold;
+        font-family: $heebo-regular;
+        font-size: calcRem(16px);
         @include bp(tablet-sm-up) {
           width: calcRem(300px);
         }
-        img {
+        > img {
           width: 100%;
         }
-        span {
+        > span {
+          @include flex(row, space-between);
+          width: 100%;
           margin-top: calcRem(10px);
+          > span {
+            &:last-of-type {
+              font-size: calcRem(12px);
+            }
+          }
         }
       }
     }
@@ -89,17 +86,17 @@
       padding: 0 calcRem(5px) calcRem(10px);
       border-bottom: 1px solid $text-lighter-gray;
       > a {
-        font-size: calcRem(25px);
+        font-size: calcRem(20px);
         color: $text-black;
-        font-family: $bc-bold;
+        font-family: $heebo-regular;
       }
     }
     .description {
       width: 100%;
       padding: 0 calcRem(5px);
       font-family: $pp-regular;
-      font-size: calcRem(16px);
-      @include lineHeight(16px, 25px);
+      font-size: calcRem(15px);
+      @include lineHeight(15px, 22px);
       color: $text-dark-gray;
       > a {
         display: inline-block;

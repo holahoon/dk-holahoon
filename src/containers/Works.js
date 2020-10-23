@@ -11,13 +11,15 @@ function Works({ match }) {
   return (
     <WrapperTransition>
       <div className='works' style={{ minHeight: `${windowInnerHeight}px` }}>
-        <h2 className='works__page-title'>side hustles</h2>
         <div className='works__projects-container'>
-          {dkData.map(({ pageUrl, title, image }, index) => (
+          {dkData.map(({ pageUrl, title, year, image }, index) => (
             <div className='project' key={index}>
               <Link to={`${match.path}/${pageUrl}`}>
                 <img src={image} alt={title} />
-                <span>{title}</span>
+                <span>
+                  <span>{title}</span>
+                  <span>({year})</span>
+                </span>
               </Link>
             </div>
           ))}
