@@ -1,9 +1,21 @@
 .works {
-  padding: calcRem(80px) 0 calcRem(30px);
+  padding: calcRem(100px) 0 calcRem(30px);
+
+  &__page-title {
+    // max-width: calcRem(1000px);
+    max-width: calcRem(980px);
+    margin: calcRem(10px) auto calcRem(30px);
+    padding-bottom: calcRem(20px);
+    font-family: $pp-regular;
+    font-size: calcRem(22px);
+    color: $text-dark-gray;
+    border-bottom: 1px solid $text-lighter-gray;
+  }
+
   &__projects-container {
     @include flex(row);
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: calcRem(1000px);
     margin: 0 auto;
     @include bp(desktop-sm-up) {
       @include flex(row, flex-start);
@@ -15,10 +27,13 @@
       }
       a {
         @include flex(column, flex-start, flex-start);
-        width: 300px;
+        width: 100%;
         border-radius: calcRem(5px);
         color: $text-black;
         font-family: $bc-bold;
+        @include bp(tablet-sm-up) {
+          width: calcRem(300px);
+        }
         img {
           width: 100%;
         }

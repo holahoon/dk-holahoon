@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 
+import WrapperTransition from "components/wrapperContainerTransition/WrapperTransition";
 import useWindowsHeight from "hooks/useWindowsHeight";
 import { LanguageContext } from "hooks/LanguageContext";
 
@@ -55,16 +56,18 @@ function Home() {
   );
 
   return (
-    <main className='home' style={{ height: `${windowInnerHeight}px` }}>
-      <div className='home__content-container'>
-        {greetings}
+    <WrapperTransition>
+      <div className='home' style={{ height: `${windowInnerHeight}px` }}>
+        <div className='home__content-container'>
+          {greetings}
 
-        <div className='home__message-container'>
-          {message}
-          <p className='hustle'>Hustle 'n Code</p>
+          <div className='home__message-container'>
+            {message}
+            <p className='hustle'>Hustle 'n Code</p>
+          </div>
         </div>
       </div>
-    </main>
+    </WrapperTransition>
   );
 }
 

@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 
-import { LanguageContext } from "hooks/LanguageContext";
+import WrapperTransition from "components/wrapperContainerTransition/WrapperTransition";
 import SocialContact from "components/socialContact/SocialContact";
+import { LanguageContext } from "hooks/LanguageContext";
 import LottieHi from "components/lottieImage/LottieHi";
 
 function About() {
@@ -99,11 +100,13 @@ function About() {
   );
 
   return (
-    <div className='about'>
-      <LottieHi />
-      {aboutMeIntroduction}
-      <SocialContact />
-    </div>
+    <WrapperTransition>
+      <div className='about'>
+        <LottieHi />
+        {aboutMeIntroduction}
+        <SocialContact />
+      </div>
+    </WrapperTransition>
   );
 }
 

@@ -1,10 +1,14 @@
 import React from "react";
 
+import WrapperTransition from "components/wrapperContainerTransition/WrapperTransition";
+
 function Blog() {
   return (
-    <div>
-      <h1>coming soon</h1>
-    </div>
+    <WrapperTransition>
+      <div>
+        <h1>coming soon</h1>
+      </div>
+    </WrapperTransition>
   );
 }
 
