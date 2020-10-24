@@ -10,10 +10,7 @@
       @include flex(row, flex-start);
     }
     .project {
-      margin: calcRem(10px) calcRem(15px) calcRem(25px);
-      @include bp(desktop-sm-up) {
-        margin: calcRem(10px) calcRem(25px) calcRem(40px);
-      }
+      margin: calcRem(10px) calcRem(25px) calcRem(25px);
       a {
         @include flex(column, flex-start, flex-start);
         width: 100%;
@@ -52,7 +49,7 @@
     @include flex(column, flex-start, flex-end);
     max-width: calcRem(650px);
     padding: calcRem(100px) calcRem(10px) 0;
-    margin-bottom: calcRem(30px);
+    margin-bottom: calcRem(50px);
     @include bp(desktop-sm-up) {
       padding-left: 0;
       padding-right: 0;

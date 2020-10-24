@@ -1,0 +1,20 @@
+.blog {
+  @include flex();
+  h2 {
+    font-family: $pp-semibold;
+    font-size: calcRem(25px);
+    @include bp(tablet-sm-up) {
+      font-size: calcRem(30px);
+    }
+  }
+  p {
+    font-family: $pp-regular;
+    font-size: calcRem(16px);
+    @include bp(tablet-sm-up) {
+      font-size: calcRem(20px);
+    }
+  }
+  svg {
+    margin-top: calcRem(50px);
+  }
+}

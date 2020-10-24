@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import WrapperTransition from "components/wrapperContainerTransition/WrapperTransition";
 import SocialContact from "components/socialContact/SocialContact";
 import { LanguageContext } from "hooks/LanguageContext";
-import LottieHi from "components/lottieImage/LottieHi";
+import LottieImage from "components/lottieImage/LottieImage";
 
 function About() {
   const { languageHandler } = useContext(LanguageContext);
@@ -102,7 +102,7 @@ function About() {
   return (
     <WrapperTransition>
       <div className='about'>
-        <LottieHi />
+        <LottieImage isAboutPage />
         {aboutMeIntroduction}
         <SocialContact />
       </div>

@@ -50,12 +50,24 @@
 
 .lottie-container {
   margin-bottom: calcRem(40px);
-  > div {
-    max-width: calcRem(200px);
-    max-height: calcRem(200px);
-    @include bp(tablet-sm-up) {
+  &.lottie-hi {
+    > div {
+      max-width: calcRem(220px);
+      max-height: calcRem(220px);
+      @include bp(tablet-sm-up) {
+        max-width: calcRem(300px);
+        max-height: calcRem(300px);
+      }
+    }
+  }
+  &.lottie-construction {
+    > div {
       max-width: calcRem(300px);
       max-height: calcRem(300px);
+      @include bp(tablet-sm-up) {
+        max-width: calcRem(450px);
+        max-height: calcRem(450px);
+      }
     }
   }
 }
