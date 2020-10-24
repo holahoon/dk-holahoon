@@ -7,10 +7,10 @@
 
 ### Dependencies
 - [react-router-dom](https://reactrouter.com/web/guides/quick-start)
-- [react-transition-group](https://reactcommunity.org/react-transition-group/)
-- [Sass](https://sass-lang.com/)
+- [framer-motion](https://www.framer.com/motion/)
 - [react-icons](https://react-icons.github.io/react-icons/)
 - [react-lottie](https://github.com/chenqingspring/react-lottie#readme)
+- [Sass](https://sass-lang.com/)
 - [lodash](https://lodash.com/)
 
 It is using [absolute imports](https://create-react-app.dev/docs/importing-a-component/) to improve readability of the imported files.
