@@ -1,27 +1,27 @@
 .header {
-  @include max-width;
-  @include flex(row, space-between, center);
   position: fixed;
   top: 0;
-  left: auto;
-  right: auto;
+  left: 0;
   width: 100%;
   margin: 0 auto;
   padding: calcRem(25px) calcRem(30px) calcRem(20px);
   z-index: 1;
   transition: all 0.5s ease;
-  // @include bp(tablet-lg-up) {
-  //   position: relative;
-  // }
 
   &--sticky {
     @extend .header;
     background-color: $gains-boro;
     opacity: 0.97;
     @include bp(tablet-lg-up) {
-      // background-color: transparent;
       opacity: 1;
     }
+  }
+
+  &__container {
+    @include max-width;
+    @include flex(row, space-between, center);
+    width: 100%;
+    margin: 0 auto;
   }
 
   // - dk logo
@@ -138,14 +138,19 @@
         font-size: calcRem(18px);
         @include lineHeight(18px, 18px);
         transition: color 0.15s cubic-bezier(0.77, 0.14, 0.71, 0.19) 0.15s;
-        &:hover {
-          color: $cornsilk;
-          & ~ .red-line {
-            height: 100%;
-            width: 110%;
-            left: -5%;
+        @include bp(desktop-sm-up) {
+          &:hover {
+            color: $cornsilk;
+            & ~ .red-line {
+              height: 100%;
+              width: 110%;
+              left: -5%;
+            }
           }
         }
+      }
+      .active-link {
+        color: $text-light-gray;
       }
       .red-line {
         @include red-line;

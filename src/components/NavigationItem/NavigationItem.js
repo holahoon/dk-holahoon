@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavigationItem({ linkItem, closeMobileNav }) {
   return (
     <li className='nav__item' onClick={closeMobileNav}>
-      <Link to={`/${linkItem}`}>{linkItem}</Link>
+      <NavLink to={`/${linkItem}`} activeClassName='active-link'>
+        {linkItem}
+      </NavLink>
       <span className='red-line'></span>
     </li>
   );

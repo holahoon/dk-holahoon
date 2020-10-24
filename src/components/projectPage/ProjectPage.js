@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 
 import WrapperTransition from "components/wrapperContainerTransition/WrapperTransition";
 import useWindowsHeight from "hooks/useWindowsHeight";
+import { LanguageContext } from "hooks/LanguageContext";
 import { dkData } from "components/data/dkData";
 import { RiGithubLine } from "react-icons/ri";
 import { AiOutlineSwapLeft } from "react-icons/ai";
@@ -10,6 +11,8 @@ import { AiOutlineSwapLeft } from "react-icons/ai";
 function ProjectPage({ history }) {
   const windowInnerHeight = useWindowsHeight();
   const { projectId } = useParams();
+  const { languageHandler } = useContext(LanguageContext);
+  const isLanguageKorean = languageHandler[0];
 
   const previousPageHandler = () => {
     history.goBack();
@@ -20,9 +23,9 @@ function ProjectPage({ history }) {
       <div className='project-page'>
         {dkData
           .filter(({ pageUrl }) => pageUrl === projectId)
-          .map(({ title, description, linkUrl, githubUrl, image }) => (
+          .map(({ english, korean, linkUrl, githubUrl, gifImage }) => (
             <div
-              key={title}
+              key={english.title}
               className='project-page__detail'
               style={{ minHeight: `${windowInnerHeight}px` }}
             >
@@ -36,15 +39,15 @@ function ProjectPage({ history }) {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <img src={image} alt={title} />
+                <img src={gifImage} alt={english.title} />
               </a>
               <h2 className='title'>
                 <a href={linkUrl} target='_blank' rel='noopener noreferrer'>
-                  {title}
+                  {isLanguageKorean ? korean.title : english.title}
                 </a>
               </h2>
               <p className='description'>
-                {description}{" "}
+                {isLanguageKorean ? korean.description : english.description}{" "}
                 <a href={githubUrl} target='_blank' rel='noopener noreferrer'>
                   check out my repo
                   <RiGithubLine />

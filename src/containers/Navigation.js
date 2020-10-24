@@ -39,31 +39,33 @@ function Navigation() {
       ref={headerRef}
       className={`header${navBackground ? "--sticky" : ""}`}
     >
-      <span className='header__logo'>
-        <Link to='/'>dk</Link>
-      </span>
+      <div className='header__container'>
+        <span className='header__logo'>
+          <Link to='/'>dk</Link>
+        </span>
 
-      <div className='mobile-menu' onClick={toggleMobileNavHandler}>
-        <span
-          className={`mobile-menu__item ${
-            isMobileNavOpen ? "mobile--active" : ""
-          }`}
-        ></span>
+        <div className='mobile-menu' onClick={toggleMobileNavHandler}>
+          <span
+            className={`mobile-menu__item ${
+              isMobileNavOpen ? "mobile--active" : ""
+            }`}
+          ></span>
+        </div>
+
+        <nav className={`nav ${isMobileNavOpen ? "nav-mobile--active" : ""}`}>
+          <ul className='nav__list-container'>
+            {navigationMenuItems.map((linkItem, i) => (
+              <NavigationItem
+                key={i}
+                linkItem={linkItem}
+                closeMobileNav={closeMobileNavHandler}
+              />
+            ))}
+          </ul>
+
+          <LanguageSwitch closeMobilenav={closeMobileNavHandler} />
+        </nav>
       </div>
-
-      <nav className={`nav ${isMobileNavOpen ? "nav-mobile--active" : ""}`}>
-        <ul className='nav__list-container'>
-          {navigationMenuItems.map((linkItem, i) => (
-            <NavigationItem
-              key={i}
-              linkItem={linkItem}
-              closeMobileNav={closeMobileNavHandler}
-            />
-          ))}
-        </ul>
-
-        <LanguageSwitch closeMobilenav={closeMobileNavHandler} />
-      </nav>
 
       <Backdrop
         toggleBackdrop={isMobileNavOpen}

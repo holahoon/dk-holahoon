@@ -9,22 +9,23 @@
   @include flex(column, space-between, center);
   padding: 0 calcRem(30px) calcRem(5px);
   z-index: 0;
-  @include bp(tablet-sm-up) {
+  @include bp(tablet-lg-up) {
     @include flex(row, flex-end, center);
-    padding-bottom: calcRem(20px);
-  }
-
-  &--fixed {
-    @extend .footer;
+    // padding-bottom: calcRem(5px);
     position: fixed;
   }
 
+  // &--fixed {
+  //   @extend .footer;
+  //   position: fixed;
+  // }
+
   &__copyright {
     color: $text-light-gray;
-    font-size: calcRem(12px);
+    font-size: calcRem(11px);
     font-family: $heebo-regular;
     @include bp(tablet-sm-up) {
-      font-size: calcRem(13px);
+      font-size: calcRem(12px);
     }
 
     &__english {
