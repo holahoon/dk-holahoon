@@ -19,16 +19,16 @@ function Home() {
 
   // Greetings message in en/kr
   const greetings = isLanguageKorean ? (
-    <IntroHeaderInKorean />
+    <ntroHeaderInKorean />
   ) : (
-    <IntroHeaderInEnglish />
+    <ntroHeaderInEnglish />
   );
 
   // Sub message in en/kr
   const message = isLanguageKorean ? (
-    <IntroSubHeaderInKorean />
+    <ntroSubHeaderInKorean />
   ) : (
-    <IntroSubHeaderInEnglish />
+    <ntroSubHeaderInEnglish />
   );
 
   return (

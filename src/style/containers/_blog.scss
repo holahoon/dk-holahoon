@@ -1,15 +1,19 @@
 .blog {
   @include flex();
   h2 {
+    text-align: center;
     font-family: $pp-semibold;
     font-size: calcRem(25px);
+    color: $text-black;
     @include bp(tablet-sm-up) {
       font-size: calcRem(30px);
     }
   }
   p {
+    text-align: center;
     font-family: $pp-regular;
     font-size: calcRem(16px);
+    color: $text-black;
     @include bp(tablet-sm-up) {
       font-size: calcRem(20px);
     }

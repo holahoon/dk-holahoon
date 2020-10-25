@@ -1,5 +1,7 @@
 import React from "react";
 
+import LottieImage from "components/lottieImage/LottieImage";
+
 export const IntroHeaderInEnglish = () => (
   <div className='home__english-container'>
     <h3 className='english-greeting'>Hi there!</h3>
@@ -22,7 +24,7 @@ export const IntroHeaderInEnglish = () => (
 
 export const IntroSubHeaderInEnglish = () => (
   <p className='english-message'>
-    'til my one line of code today brightens up tomorrow
+    'til one line of code today brightens up tomorrow,
   </p>
 );
 
@@ -60,5 +62,14 @@ export const AboutInEnglish = ({ days, ordinal }) => (
       I'm currently open for opportunities to grow together. Don't hesitate to
       contact me!
     </p>
+  </div>
+);
+
+export const BlogInEnglish = () => (
+  <div>
+    <h2>I'm sorry..</h2>
+    <p>this page is under construction</p>
+    <LottieImage />
+    <p>I'll be back with more awesome contents!</p>
   </div>
 );

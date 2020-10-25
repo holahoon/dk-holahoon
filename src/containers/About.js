@@ -37,7 +37,7 @@ function About() {
   const aboutMeIntroduction = isLanguageKorean ? (
     <AboutInKorean days={days} />
   ) : (
-    <AboutInEnglish days={days} ordianl={ordinal} />
+    <AboutInEnglish days={days} ordinal={ordinal} />
   );
 
   return (

@@ -1,5 +1,7 @@
 import React from "react";
 
+import LottieImage from "components/lottieImage/LottieImage";
+
 export const IntroHeaderInKorean = () => (
   <div className='home__korean-container'>
     <h3 className='korean-greeting'>반갑습니다!</h3>
@@ -19,7 +21,7 @@ export const IntroHeaderInKorean = () => (
 );
 
 export const IntroSubHeaderInKorean = () => (
-  <p className='korean-message'>오늘 한줄의 코드로 밝아질 내일을 위하여</p>
+  <p className='korean-message'>오늘 한줄의 코드로 밝아질 내일을 위하여,</p>
 );
 
 export const AboutInKorean = ({ days }) => (
@@ -50,5 +52,14 @@ export const AboutInKorean = ({ days }) => (
       결정을 하여 한국에서 개발자의 꿈을 이어가고자 귀국 하였습니다.
     </p>
     <p>기회가 된다면 함께 성장하고 싶습니다. 언제든지 연락주세요!</p>
+  </div>
+);
+
+export const BlogInKorean = () => (
+  <div>
+    <h2>죄송해요..</h2>
+    <p>이 페이지는 아직 작업중 입니다</p>
+    <LottieImage />
+    <p>좀 더 멋진 컨텐츠로 돌아오겠습니다!</p>
   </div>
 );
