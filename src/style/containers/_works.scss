@@ -15,8 +15,6 @@
         @include flex(column, flex-start, flex-start);
         width: 100%;
         border-radius: calcRem(5px);
-        color: $text-black;
-        font-family: $heebo-regular;
         font-size: calcRem(15px);
         @include bp(tablet-sm-up) {
           width: calcRem(280px);
@@ -29,6 +27,8 @@
           width: 100%;
           margin-top: calcRem(10px);
           padding: 0 calcRem(5px);
+          color: $text-black;
+          font-family: $heebo-regular;
           > span {
             &:last-of-type {
               font-size: calcRem(12px);
@@ -58,11 +58,15 @@
 
     .button {
       @include flex(row);
+      margin-right: calcRem(20px);
       background: none;
       border: none;
       font-family: $heebo-regular;
       padding: 0;
       cursor: pointer;
+      @include bp(tablet-sm-up) {
+        margin-right: 0;
+      }
       &:hover > svg {
         transform: translateX(-5px);
       }

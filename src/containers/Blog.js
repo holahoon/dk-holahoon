@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 
 import WrapperTransition from "components/wrapperContainerTransition/WrapperTransition";
-// import LottieImage from "components/lottieImage/LottieImage";
 import { BlogInEnglish } from "components/data/dataInEnglish";
 import { BlogInKorean } from "components/data/dataInKorean";
 import useWindowsHeight from "hooks/useWindowsHeight";

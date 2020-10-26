@@ -27,9 +27,7 @@ export const IntroSubHeaderInKorean = () => (
 export const AboutInKorean = ({ days }) => (
   <div className='about__korean-introduction'>
     <h3>반갑습니다!</h3>
-    <h2>
-      프론트엔드 개발자 김명훈<span>(DK)</span> 입니다.
-    </h2>
+    <h2>프론트엔드 개발자 김명훈 입니다.</h2>
     <p>
       미국 조지아주 둘루스에 위치한 디지털 마케팅 에이젼시에 프론트엔드 개발자로
       첫 입사하여 많은 개발자들과 함께 프로젝트를 협업하며 QA 와 PM 등 다른
@@ -57,7 +55,7 @@ export const AboutInKorean = ({ days }) => (
 
 export const BlogInKorean = () => (
   <div>
-    <h2>죄송해요..</h2>
+    <h2>죄송합니다..</h2>
     <p>이 페이지는 아직 작업중 입니다</p>
     <LottieImage />
     <p>좀 더 멋진 컨텐츠로 돌아오겠습니다!</p>

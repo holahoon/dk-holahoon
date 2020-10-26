@@ -14,6 +14,16 @@
     > h2,
     p {
       display: inline-block;
+      > code {
+        span {
+          &:first-child {
+            color: $coral-red;
+          }
+          &:last-child {
+            color: $gains-boro;
+          }
+        }
+      }
     }
   }
 
@@ -24,21 +34,14 @@
       @include bp(tablet-sm-up) {
         font-size: calcRem(27px);
       }
-      span {
-        font-size: calcRem(15px);
-        @include bp(tablet-sm-up) {
-          font-size: calcRem(20px);
-        }
-      }
     }
     h3 {
       margin-bottom: calcRem(20px);
     }
     p {
       margin: calcRem(7px) 0;
-      font-family: $bc-light;
       font-size: calcRem(17px);
-      @include lineHeight(19px, 25px);
+      @include lineHeight(17px, 23px);
       @include bp(tablet-sm-up) {
         font-size: calcRem(19px);
       }
@@ -51,12 +54,6 @@
       font-size: calcRem(20px);
       @include bp(tablet-sm-up) {
         font-size: calcRem(30px);
-      }
-      span {
-        font-size: calcRem(15px);
-        @include bp(tablet-sm-up) {
-          font-size: calcRem(20px);
-        }
       }
     }
     h3 {
