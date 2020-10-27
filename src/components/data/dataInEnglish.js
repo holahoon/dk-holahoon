@@ -31,12 +31,17 @@ export const IntroSubHeaderInEnglish = () => (
 export const AboutInEnglish = ({ days, ordinal }) => (
   <div className='about__english-introduction'>
     <h3>Hey there! thanks for stopping by</h3>
-    <h2>My name is David Kim</h2>
+    <h2>I'm a front-end developer, David Kim</h2>
     <p>
       It all started with one line of "hello world" that changed my entire life
-      to walk the 'infinite learning journey' as a developer.
+      to walk the 'infinite learning journey' of a developer.
     </p>
     <p>
+      I was never a type of person who liked to learn new things until I met
+      JavaSCript (of course HTML and CSS). The beauty of seeing my very own
+      written code working on a browser completely mesmerized me to lead me this
+      far. My professional career as a front-end developer started in late 2019
+      at a digital marketing agency. That became my springboard to...
       {/* Like most of the developers do, I still remember the day when I first
       console logged "hello world" and as you might have guessed, it was the day
       when I was completely mesmerized by the beauty of seeing my very own
