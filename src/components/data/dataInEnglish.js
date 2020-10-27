@@ -28,30 +28,30 @@ export const IntroSubHeaderInEnglish = () => (
   </p>
 );
 
-export const AboutInEnglish = ({ days, ordinal }) => (
+export const AboutInEnglish = () => (
   <div className='about__english-introduction'>
     <h3>Hey there! thanks for stopping by</h3>
-    <h2>I'm a front-end developer, David Kim</h2>
+    <h2>I'm a front-end developer, David Kim.</h2>
     <p>
       It all started with one line of "hello world" that changed my entire life
       to walk the 'infinite learning journey' of a developer.
     </p>
     <p>
-      I was never a type of person who liked to learn new things until I met
-      JavaSCript (of course HTML and CSS). The beauty of seeing my very own
-      written code working on a browser completely mesmerized me to lead me this
-      far. My professional career as a front-end developer started in late 2019
-      at a digital marketing agency. That became my springboard to...
-      {/* Like most of the developers do, I still remember the day when I first
-      console logged "hello world" and as you might have guessed, it was the day
-      when I was completely mesmerized by the beauty of seeing my very own
-      written code working on the browser */}
+      In October 2019, at a digital marketing agency where I took my first
+      professional step as a developer, I have built strong trusts and
+      relationships with other team members - not just with developers, but with
+      QAs or PMs. Outside of work, I spent my spare time studying or worked on
+      side projects with a designer(but of course I did other entertaining
+      things too =)).
     </p>
     <p>
-      Well, today marks the {days}
-      <sup>{ordinal}</sup> day since I officially became a front-end developer
-      and I don't plan on just staying as a front-end developer, but I dream of
-      growing as a "damn good developer". 'Til that day comes, hustle n' code.
+      Lately I've been working mostly in ReactJS after being mesmerized by the
+      beauty of its own unique ecosystem, especially the option to use JSX along
+      with an animation to improve the boring UX. But, It does not just stop
+      there. I'm currently planning on learning React Native by taking an
+      advantage of existing React knowledge. Of course that's not it, because
+      I'm eager to learn other new stacks to solve different types of problems
+      we may face. Therefore my main motto is hustle and code.
     </p>
     <p>
       In the midst of an awful global pandemic (COVID 19), I have made up my
@@ -59,9 +59,10 @@ export const AboutInEnglish = ({ days, ordinal }) => (
       opportunities as a developer and experience new/different life style.
     </p>
     <p>
+      <span>"</span>
       I'm currently open & actively seeking for opportunities to grow together.
-      <br />
-      Don't hesitate to contact me!
+      So, don't hesitate to contact me!
+      <span>"</span>
     </p>
   </div>
 );

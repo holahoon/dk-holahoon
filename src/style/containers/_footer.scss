@@ -11,14 +11,8 @@
   z-index: 0;
   @include bp(tablet-lg-up) {
     @include flex(row, flex-end, center);
-    // padding-bottom: calcRem(5px);
     position: fixed;
   }
-
-  // &--fixed {
-  //   @extend .footer;
-  //   position: fixed;
-  // }
 
   &__copyright {
     color: $text-light-gray;

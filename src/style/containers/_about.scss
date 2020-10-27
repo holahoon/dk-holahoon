@@ -14,15 +14,9 @@
     > h2,
     p {
       display: inline-block;
-      > code {
-        span {
-          &:first-child {
-            color: $coral-red;
-          }
-          &:last-child {
-            color: $gains-boro;
-          }
-        }
+      span {
+        font-family: $bc-bold;
+        color: $coral-red;
       }
     }
   }
