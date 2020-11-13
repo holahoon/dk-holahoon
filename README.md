@@ -32,7 +32,7 @@ This portfolio project was created in replacement of the old holahoon-portfolio.
 ## Setup
 Clone the repo and run:
 ```
-npm run build
+npm install
 ```
 Downloads a package and its dependencies which will generate node_modules folder.
 
