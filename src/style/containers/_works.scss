@@ -16,11 +16,20 @@
         width: 100%;
         border-radius: calcRem(5px);
         font-size: calcRem(15px);
+        &:hover {
+          & span {
+            transform: translateY(2px);
+          }
+        }
         @include bp(tablet-sm-up) {
           width: calcRem(280px);
         }
         > img {
           width: 100%;
+          @include bp(tablet-sm-up) {
+            max-width: calcRem(280px);
+            max-height: calcRem(150px);
+          }
         }
         > span {
           @include flex(row, space-between);
@@ -29,6 +38,7 @@
           padding: 0 calcRem(5px);
           color: $text-black;
           font-family: $heebo-regular;
+          transition: all 0.2s ease;
           > span {
             &:last-of-type {
               font-size: calcRem(12px);
@@ -46,7 +56,6 @@
   height: 100%;
 
   &__detail {
-    @include flex(column, flex-start, flex-end);
     max-width: calcRem(650px);
     padding: calcRem(100px) calcRem(10px) 0;
     margin-bottom: calcRem(50px);
@@ -58,6 +67,7 @@
 
     .button {
       @include flex(row);
+      float: right;
       margin-right: calcRem(20px);
       background: none;
       border: none;
@@ -122,6 +132,60 @@
           @include red-line;
           height: calcRem(1px);
           bottom: 0;
+        }
+      }
+    }
+    .stacks-container {
+      @include flex(row, flex-start, flex-end);
+      margin-top: calcRem(30px);
+      padding: 0 calcRem(5px);
+      color: $text-dark-gray;
+      font-family: $pp-regular;
+      font-size: calcRem(14px);
+      .stacks-title {
+        margin-right: calcRem(5px);
+      }
+      .logo {
+        &-react,
+        &-redux,
+        &-material,
+        &-firebase,
+        &-sass {
+          @include flex();
+          margin: 0 calcRem(5px);
+          font-size: calcRem(12px);
+          color: $text-light-gray;
+          @include bp(tablet-sm-up) {
+            margin: 0 calcRem(10px);
+          }
+          svg {
+            font-size: calcRem(20px);
+          }
+        }
+        &-react {
+          svg {
+            fill: $logo-react;
+          }
+        }
+        &-redux {
+          svg {
+            fill: $logo-redux;
+          }
+        }
+        &-material {
+          svg {
+            fill: $logo-material;
+          }
+        }
+        &-firebase {
+          svg {
+            fill: $logo-firebase;
+          }
+        }
+        &-sass {
+          svg {
+            fill: $logo-sass;
+          }
         }
       }
     }

@@ -20,9 +20,11 @@ function Navigation() {
   const toggleMobileNavHandler = useCallback(() => {
     setIsMobileNavOPen((prevState) => !prevState);
   }, []);
+
   const closeMobileNavHandler = useCallback(() => {
     setIsMobileNavOPen(false);
   }, []);
+
   const lodashScrollHandler = useCallback(
     _.throttle(() => {
       let pageYOffset = window.pageYOffset;
