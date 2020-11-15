@@ -7,13 +7,7 @@ import { LanguageContext } from "hooks/LanguageContext";
 import { dkData } from "components/data/dkData";
 import { RiGithubLine } from "react-icons/ri";
 import { FaSass } from "react-icons/fa";
-import {
-  SiFirebase,
-  SiReact,
-  SiRedux,
-  SiMaterialUi,
-  SiFramer,
-} from "react-icons/si";
+import { SiFirebase, SiReact, SiRedux, SiMaterialUi } from "react-icons/si";
 import { AiOutlineSwapLeft } from "react-icons/ai";
 
 function ProjectPage({ history }) {
