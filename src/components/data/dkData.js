@@ -16,13 +16,19 @@ export const dkData = [
     korean: {
       title: "MyBook - 일기 앱",
       description:
-        "MyBook은 일기 어플리케이션 입니다. 유저는 반드시 로그인/회원가입을 해야지만 쓰고 읽고 수정과 쓴 글을 지울수 있습니다. 또한 이 프로젝트는 ReactJS를 사용하여 UI를, Redux를 사용하여 상태관리를, Firebase를 사용하여 데이터베이스와 함께 Material-ui를 사용하여 디자인을 최대한 심플하게 하였습니다. 이 프로젝트의 주 목적은 Redux를 사용하여 데이터 교류를 컴포넌트 밖에서 하는 CRUD app을 만드는것 이었습니다.",
+        "MyBook은 일기 어플리케이션 입니다. 유저는 반드시 로그인/회원가입을 해야지만 쓰고 읽고 수정과 쓴 글을 지울 수 있습니다. 또한 이 프로젝트는 ReactJS를 사용하여 UI를, Redux를 사용하여 상태관리를, Firebase를 사용하여 데이터베이스 교류와 함께 Material-ui를 사용하여 디자인을 최대한 심플하게 하였습니다. 이 프로젝트의 주 목적은 Redux를 사용하여 데이터 교류를 컴포넌트 밖에서 하여 global state을 관리하는 CRUD app을 만드는것 이었습니다.",
     },
     year: "2020",
     image: project_mybook,
     gifImage: gif_mybook,
     linkUrl: "https://my-book-fe5fe.web.app/",
     githubUrl: "https://github.com/holahoon/mybook",
+    stacks: [
+      { name: "react", className: "react" },
+      { name: "redux", className: "redux" },
+      { name: "material-ui", className: "material" },
+      { name: "firebase", className: "firebase" },
+    ],
   },
   {
     pageUrl: "jinkyu-kang",
@@ -41,23 +47,31 @@ export const dkData = [
     gifImage: gif_jinkyuKang,
     linkUrl: "https://www.erugogada.com/",
     githubUrl: "https://github.com/holahoon/Jin-Kyu-Kang",
+    stacks: [
+      { name: "react", className: "react" },
+      { name: "sass", className: "sass" },
+    ],
   },
   {
     pageUrl: "old-holahoon",
     english: {
       title: "holahoon(previous -v)",
       description:
-        "This portfolio was made in the late 2019 to showcase some of the projects I've built which in plain HTML, CSS and JavaScript along with libraries like D3.js and React.js. Although I had a very little knowledge of React.js at the time of developing most of the projects, I've had a pleasure and building experience collaborating with a designer which has helped me to have a keen eye for details. I've currently replaced my portolio with the current site you are on.",
+        "This portfolio was made in the late 2019 to showcase some of the projects I've built which in plain HTML, CSS and JavaScript along with libraries like D3.js and React.js. Although I had a very little knowledge of React.js at the time of developing most of the projects including the portfolio, I had a pleasure building an experience collaborating with a designer which has helped me to have a keen eye for details. I've currently replaced my portolio with the current site you are on.",
     },
     korean: {
       title: "holahoon (전 버젼)",
       description:
-        "이 프로젝트는 2019년 후반에 만들었던 개인 포트폴리오 입니다. 기본적인 HTML, CSS, JavaScript와 D3.js, React.js같은 라이브러리를 사용하여 만든 프로젝트들을 담고 있습니다. 당시 React.js의 대한 이해와 기본적인 지식이 부족한 상태였지만 디자이너와 함께 협업하여 아주 작은 디테일까지도 볼수있는 눈을 여는 좋은 경험이었습니다. 현재는 지금 보고계신 사이트로 포트폴리오를 대체하였습니다.",
+        "이 프로젝트는 2019년 후반에 만들었던 개인 포트폴리오 입니다. 기본적인 HTML, CSS, JavaScript와 D3.js, React.js같은 라이브러리를 사용하여 만든 프로젝트들을 쇼케이스 하고있습니다. 당시 React.js의 대한 이해와 기본적인 지식이 부족한 상태에서 작업을 하였지만 디자이너와 함께 협업하여 아주 작은 디테일까지도 볼수있는 눈을 여는 좋은 경험이었습니다. 현재는 지금 보고계신 사이트로 포트폴리오를 대체하였습니다.",
     },
     year: "2019",
     image: project_holahoon,
     gifImage: gif_holahoon,
     linkUrl: "https://www.google.com/",
     githubUrl: "https://github.com/holahoon/new-holahoon",
+    stacks: [
+      { name: "react", className: "react" },
+      { name: "sass", className: "sass" },
+    ],
   },
 ];
