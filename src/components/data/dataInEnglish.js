@@ -30,38 +30,43 @@ export const IntroSubHeaderInEnglish = () => (
 
 export const AboutInEnglish = () => (
   <div className='about__english-introduction'>
-    <h3>Hey there! thanks for stopping by</h3>
+    <h3>Hey there! Thanks for stopping by.</h3>
     <h2>I'm a front-end developer, David Kim.</h2>
     <p>
-      It all started with one line of "hello world" that changed my entire life
-      to walk the 'infinite learning journey' of a developer.
+      It all started with "hello world" that changed my entire life to walk the
+      'infinite learning journey' of a developer.
     </p>
     <p>
-      In October 2019, at a digital marketing agency where I took my first
-      professional step as a developer, I have built strong trusts and
-      relationships with other team members - not just with developers, but with
-      QAs or PMs. Outside of work, I spent my spare time studying or worked on
-      side projects with a designer(but of course I did other entertaining
-      things too =)).
+      At a digital marketing agnecy located in Duluth, GA where I took my first
+      step as a front-end developer, I have built strong trust and relationships
+      with coworkers and by maintaining clear communications to make sure all
+      the work tickets get delivered on time. Outside of work, I always look for
+      opportunities to improve my skills by learning and building side projects.
     </p>
     <p>
-      Lately I've been working mostly in ReactJS after being mesmerized by the
-      beauty of its own unique ecosystem, especially the option to use JSX along
-      with an animation to improve the boring UX. But, It does not just stop
-      there. I'm currently planning on learning React Native by taking an
-      advantage of existing React knowledge. Of course that's not it, because
-      I'm eager to learn other new stacks to solve different types of problems
-      we may face. Therefore my main motto is hustle and code.
+      I have also experienced collaborating with a designer on developing
+      projects which helped me to open my eyes to pay closer attention to
+      details. I usually decide to use ReactJS as it is my all-time favorite
+      stack because I simply cannot resist the beauty of JSX.
+      <span role='img' aria-label='rock'>
+        🤘
+      </span>
     </p>
     <p>
-      In the midst of an awful global pandemic (COVID 19), I have made up my
-      mind to take a risk to leave America and settle in South Korea to seek
+      In the midst of an awful global pandemic (COVID 19), I have decided to
+      take the risk to leave America and settle in South Korea to seek
       opportunities as a developer and experience new/different life style.
+      <span role='img' aria-label='korea'>
+        🇰🇷
+      </span>
     </p>
     <p>
       <span>"</span>
       I'm currently open & actively seeking for opportunities to grow together.
       So, don't hesitate to contact me!
+      <span role='img' aria-label='up-side-smile'>
+        🙃
+      </span>
       <span>"</span>
     </p>
   </div>

@@ -26,7 +26,7 @@
       margin-bottom: calcRem(10px);
       font-size: calcRem(20px);
       @include bp(tablet-sm-up) {
-        font-size: calcRem(27px);
+        font-size: calcRem(25px);
       }
     }
     h3 {
@@ -37,7 +37,7 @@
       font-size: calcRem(17px);
       @include lineHeight(17px, 23px);
       @include bp(tablet-sm-up) {
-        font-size: calcRem(19px);
+        font-size: calcRem(18px);
       }
     }
   }
@@ -47,7 +47,7 @@
       margin-bottom: calcRem(10px);
       font-size: calcRem(20px);
       @include bp(tablet-sm-up) {
-        font-size: calcRem(30px);
+        font-size: calcRem(25px);
       }
     }
     h3 {
@@ -55,10 +55,10 @@
     }
     p {
       margin: calcRem(7px) 0;
-      font-size: calcRem(16px);
+      font-size: calcRem(15px);
       @include lineHeight(18px, 30px);
       @include bp(tablet-sm-up) {
-        font-size: calcRem(18px);
+        font-size: calcRem(17px);
       }
     }
   }
