@@ -6,8 +6,6 @@ import useWindowsHeight from "hooks/useWindowsHeight";
 import { LanguageContext } from "hooks/LanguageContext";
 import { dkData } from "components/data/dkData";
 import { RiGithubLine } from "react-icons/ri";
-import { FaSass } from "react-icons/fa";
-import { SiFirebase, SiReact, SiRedux, SiMaterialUi } from "react-icons/si";
 import { AiOutlineSwapLeft } from "react-icons/ai";
 
 function ProjectPage({ history }) {
@@ -20,13 +18,6 @@ function ProjectPage({ history }) {
     history.goBack();
   };
 
-  const stackIcons = {
-    react: <SiReact />,
-    redux: <SiRedux />,
-    firebase: <SiFirebase />,
-    "material-ui": <SiMaterialUi />,
-    sass: <FaSass />,
-  };
   return (
     <WrapperTransition>
       <div className='project-page'>
@@ -55,6 +46,11 @@ function ProjectPage({ history }) {
                   {isLanguageKorean ? korean.title : english.title}
                 </a>
               </h2>
+              <div className='stacks-container'>
+                {stacks.map((stack) => (
+                  <span className='stacks-logo'>{stack}</span>
+                ))}
+              </div>
               <p className='description'>
                 {isLanguageKorean ? korean.description : english.description}{" "}
                 <a href={githubUrl} target='_blank' rel='noopener noreferrer'>
@@ -63,15 +59,6 @@ function ProjectPage({ history }) {
                   <span className='red-line'></span>
                 </a>
               </p>
-              <div className='stacks-container'>
-                <span className='stacks-title'>stacks:</span>
-                {stacks.map((stack) => (
-                  <span className={`logo-${stack.className}`}>
-                    {stackIcons[stack.name]}
-                    {stack.name}
-                  </span>
-                ))}
-              </div>
             </div>
           ))}
       </div>

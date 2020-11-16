@@ -62,11 +62,11 @@ export const AboutInEnglish = () => (
     </p>
     <p>
       <span>"</span>
-      I'm currently open & actively seeking for opportunities to grow together.
-      So, don't hesitate to contact me!
+      I'm currently open & actively seeking for opportunities to grow together.{" "}
       <span role='img' aria-label='up-side-smile'>
         🙃
       </span>
+      Don't hesitate to contact me!
       <span>"</span>
     </p>
   </div>

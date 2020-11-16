@@ -23,12 +23,7 @@ export const dkData = [
     gifImage: gif_mybook,
     linkUrl: "https://my-book-fe5fe.web.app/",
     githubUrl: "https://github.com/holahoon/mybook",
-    stacks: [
-      { name: "react", className: "react" },
-      { name: "redux", className: "redux" },
-      { name: "material-ui", className: "material" },
-      { name: "firebase", className: "firebase" },
-    ],
+    stacks: ["react", "redux", "firebase", "material-ui"],
   },
   {
     pageUrl: "jinkyu-kang",
@@ -47,10 +42,7 @@ export const dkData = [
     gifImage: gif_jinkyuKang,
     linkUrl: "https://www.erugogada.com/",
     githubUrl: "https://github.com/holahoon/Jin-Kyu-Kang",
-    stacks: [
-      { name: "react", className: "react" },
-      { name: "sass", className: "sass" },
-    ],
+    stacks: ["react", "sass"],
   },
   {
     pageUrl: "old-holahoon",
@@ -69,9 +61,6 @@ export const dkData = [
     gifImage: gif_holahoon,
     linkUrl: "https://www.google.com/",
     githubUrl: "https://github.com/holahoon/new-holahoon",
-    stacks: [
-      { name: "react", className: "react" },
-      { name: "sass", className: "sass" },
-    ],
+    stacks: ["react", "sass"],
   },
 ];

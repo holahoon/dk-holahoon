@@ -137,55 +137,25 @@
     }
     .stacks-container {
       @include flex(row, flex-start, flex-end);
-      margin-top: calcRem(30px);
+      margin-top: calcRem(10px);
+      margin-bottom: calcRem(20px);
       padding: 0 calcRem(5px);
       color: $text-dark-gray;
       font-family: $pp-regular;
       font-size: calcRem(14px);
-      .stacks-title {
+      .stacks-logo {
+        @include flex();
         margin-right: calcRem(5px);
-      }
-      .logo {
-        &-react,
-        &-redux,
-        &-material,
-        &-firebase,
-        &-sass {
-          @include flex();
-          margin: 0 calcRem(5px);
-          font-size: calcRem(12px);
-          color: $text-light-gray;
-          @include bp(tablet-sm-up) {
-            margin: 0 calcRem(10px);
-          }
-          svg {
-            font-size: calcRem(20px);
-          }
+        font-size: calcRem(12px);
+        color: $text-dark-gray;
+        background-color: $text-lighter-gray;
+        border-radius: 12px;
+        padding: 2px 8px;
+        @include bp(tablet-sm-up) {
+          margin-right: calcRem(10px);
         }
-        &-react {
-          svg {
-            fill: $logo-react;
-          }
-        }
-        &-redux {
-          svg {
-            fill: $logo-redux;
-          }
-        }
-        &-material {
-          svg {
-            fill: $logo-material;
-          }
-        }
-        &-firebase {
-          svg {
-            fill: $logo-firebase;
-          }
-        }
-        &-sass {
-          svg {
-            fill: $logo-sass;
-          }
+        svg {
+          font-size: calcRem(20px);
         }
       }
     }
