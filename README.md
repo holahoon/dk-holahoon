@@ -5,15 +5,12 @@
 ---
 
 ## General Info
-This portfolio project was created in replacement of the old holahoon-portfolio. It consists of home, works, about and blog pages. All the data contents are stored in [project data](./src/components/data/dkData.js), [korean data](./src/components/data/dataInKorean.js), [english data](./src/components/data/dataInEnglish.js)
+This portfolio project was created in replacement of the old holahoon-portfolio. It consists of home, works, about and blog page. For blog page, I'm planning on just linking it to a "Today I Learned" markdown on Github. All the data contents are stored in [project data](./src/components/data/dkData.js), [korean data](./src/components/data/dataInKorean.js) and [english data](./src/components/data/dataInEnglish.js). Each project page is created by looping through the project data. By doing so, I only have to update the [project data](./src/components/data/dkData.js) js file if I have any updated project contents(of course I'd have to add images if needed).
 
 ## Technologies
 
-### Main stack
- [React.js](https://reactjs.org/) - built with `create-react-app`. This project is built with functional components with hooks only.
- - Using context api to create a global variable(state) in order to avoid "prop drilling". It may be an over-kill since the context only has one state which is controlling the language preference either in English or Korean. However, since this language state is very crucial in order to conditionally render the components, I have decided to make it a global state using context api.
-
-### Dependencies
+ - [React.js](https://reactjs.org/) - built with `create-react-app`. This project is built with functional components with hooks only.
+   - Using context api to create a global variable(state) in order to avoid "prop drilling". It may be an over-kill since the context only has one state which is controlling the language preference either in English or Korean. However, since this language state is very crucial in order to conditionally render the components, I have decided to make it a global state using context api.
 - [react-router-dom](https://reactrouter.com/web/guides/quick-start)
   - This dependency was installed to navigate between main container components(Home, Works, About, Blog) to have a feel of multi-page application.
 - [framer-motion](https://www.framer.com/motion/)
