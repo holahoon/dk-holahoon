@@ -47,7 +47,10 @@ export const AboutInEnglish = () => (
       I have also experienced collaborating with a designer on developing
       projects which helped me to open my eyes to pay closer attention to
       details. I usually decide to use ReactJS as it is my all-time favorite
-      stack because I simply cannot resist the beauty of JSX.
+      stack because I simply cannot resist the beauty of JSX. I'm currently
+      learning TypeScript to enforce one of the downsides JavaScript has, the
+      weakly type. I believe TypeScript could be very useful in React project
+      development.
       <span role='img' aria-label='rock'>
         🤘
       </span>

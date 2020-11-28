@@ -11,12 +11,12 @@ export const dkData = [
     english: {
       title: "MyBook - daily journal",
       description:
-        "MyBook is a daily journal application. The user must sign in/up to fully have access to the app to be able to write, read, edit or delete the written journal post. This project was developed using ReactJS for UI, Redux for state management and Firebase for database with Material-ui to keep designs simple. The main focus of this project was to build a simple CRUD application by using Redux to handle data interactions outside the React components.",
+        "MyBook is a daily journal application. The user must sign in/up to fully have access to the app to be able to write, read, edit or delete the written journal post. This project was developed using ReactJS for UI, Redux for state management and Firebase for database with Material-ui to keep designs simple. The main focus of this project was to build a simple CRUD application by using Redux to handle data interactions outside the React components. I'll be implmenting TypeScript pretty soon. If you'd like to test the app, here's a temporary email and password to use: Email: dk@email.com. Password: dk123123.",
     },
     korean: {
-      title: "MyBook - 일기 앱",
+      title: "MyBook - 일기 어플리케이션",
       description:
-        "MyBook은 일기 어플리케이션 입니다. 유저는 반드시 로그인/회원가입을 해야지만 쓰고 읽고 수정과 쓴 글을 지울 수 있습니다. 또한 이 프로젝트는 ReactJS를 사용하여 UI를, Redux를 사용하여 상태관리를, Firebase를 사용하여 데이터베이스 교류와 함께 Material-ui를 사용하여 디자인을 최대한 심플하게 하였습니다. 이 프로젝트의 주 목적은 Redux를 사용하여 데이터 교류를 컴포넌트 밖에서 하여 global state을 관리하는 CRUD app을 만드는것 이었습니다.",
+        "MyBook은 일기 어플리케이션 입니다. 유저는 반드시 로그인/회원가입을 해야지만 쓰고 읽고 수정과 쓴 글을 지울 수 있습니다. 또한 이 프로젝트는 ReactJS를 사용하여 UI를, Redux를 사용하여 상태관리를, Firebase를 사용하여 데이터베이스 교류와 함께 Material-ui를 사용하여 디자인을 최대한 심플하게 하였습니다. 이 프로젝트의 주 목적은 Redux를 사용하여 데이터 교류를 컴포넌트 밖에서 하여 global state을 관리하는 CRUD app을 만드는것 이었습니다. 조만간 타입스크립트를 적용할 예정입니다. 혹, 어떻게 작동하는지 직접 보고싶으시다면 공용 이메일, 비밀번호 입니다: Email: dk@email.com. Password: dk123123.",
     },
     year: "2020",
     image: project_mybook,
@@ -42,7 +42,7 @@ export const dkData = [
     gifImage: gif_jinkyuKang,
     linkUrl: "https://www.erugogada.com/",
     githubUrl: "https://github.com/holahoon/Jin-Kyu-Kang",
-    stacks: ["react", "sass"],
+    stacks: ["react", "framer-motion", "emailJS", "sass"],
   },
   {
     pageUrl: "old-holahoon",
