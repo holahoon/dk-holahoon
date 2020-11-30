@@ -15,8 +15,8 @@ function App() {
 
   useEffect(() => {
     // Google Analytics
-    ReactGA.initialize("G-ZQE2BZ0R9Z");
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.initialize("G-F60415KVCY");
+    // ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (
