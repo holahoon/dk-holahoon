@@ -59,7 +59,7 @@ export const dkData = [
     year: "2019",
     image: project_holahoon,
     gifImage: gif_holahoon,
-    linkUrl: "https://www.google.com/",
+    linkUrl: "https://david-kim-portfolio.firebaseapp.com/",
     githubUrl: "https://github.com/holahoon/new-holahoon",
     stacks: ["react", "sass"],
   },
